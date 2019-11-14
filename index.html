@@ -73,18 +73,32 @@
         padding: 20px 0px;
       }
       #projects h2 {
-        color: #444444;
+        color:grey;
         padding: 10px 0px;
       }
       #projects .btn-default {
         background: #444444;
       }
-      .proj-img {
-        width:500px;
-        box-shadow: 3px 3px 5px grey;
+   .proj-img {
+     box-shadow:4px 4px 5px 2px grey;
+   }
+   .text > p{
+        font-size:18px;
       }
-      #projects .row {
-        margin: 30px 0px;
+      .text h3 {
+        font-size:24px;
+        text-transform:capitalize;
+      }
+      #projects .row:nth-child(2){
+        margin:30px 0px 10px 0px;
+      }
+      
+      #projects .row:nth-child(3) {
+        margin:50px 0px;
+      }
+      
+      #projects .row:nth-child(4){
+        margin:70px 0px;
       }
       #exp {
         box-shadow: inset 6px 6px 7px -3px grey;      
@@ -95,15 +109,8 @@
         border: 1px solid black;
         border-radius: 50px;
       }
-      .text-section {
-        margin-top:90px;
-        box-shadow:4px 4px 4px grey;
-        color:#444444;
-        border-radius:10px;
-        background:white;
-        margin-left:-90px;
-        padding:20px;
-      }
+
+
     </style>
   </head>
   <body>
@@ -145,35 +152,104 @@
       </div>
     </main>
     <section class="container-fluid" id="projects">
-      <div class="container">
-        <h2 class="text-center">Some Recent Projects</h2>
-        <div class="row">
-          <div class="col-lg-4 col-xl-4 col-md-4">
-            <img src="images/pragmafox.PNG" class="img-responsive proj-img" />
-          </div>
-            <div class="col-lg-4 col-xl-4 col-md-4">
+        <div class="container">
+          <h2 class="text-center">Some Recent Projects</h2>
+          <div class="row">
+            <div class="col-lg-6 col-xl-6 col-md-6">
               <img
-                src="images/devblog.PNG"
-                class="img-responsive proj-img"
-                alt="cryptos-cli"
-              />
-            </div>
-            <div class="col-lg-4 col-xl-4 col-md-4">
-              <img
-                src="images/devblog.png"
+                src="images/pragmafox.PNG"
                 style="border:1px solid lightgrey;"
-                class="img-responsive proj-img"
+                class="proj-img img-responsive"
                 alt="libro"
               />
             </div>
+            <div class="col-lg-6 col-xl-6 col-md-6 text">
+              <h3>pragmafox</h3>
+              <p>
+                Pragmafox is a company which offer affordable services to a startup and 
+                small business. They offer graphic design, web development,web design,marketing. 
+                they wanted very simple and easy to undertand website.
+              </p>
+              <a
+                class="btn btn-default"
+                target="_blank"
+                href="http://pragmafox.com/"
+                ><i class="fa fa-globe"></i> Visit</a
+              >
+            </div>
           </div>
-      </div>
-    </section>
+          <div class="row">
+              <div class="col-lg-6 col-xl-6 col-md-6 text">
+                <h3>DevBlog</h3>
+                <p>
+                    Devblog is fullstack javascript web application.this is a multiuser blogging system.i created using node.js and mongodb.i also used Google Oauth API and tinymce editor.
+                </p>
+                <a
+                  class="btn btn-default"
+                  target="_blank"
+                  href="https://floating-everglades-10580.herokuapp.com/"
+                  ><i class="fa fa-globe"></i> Visit</a
+                >
+                <a
+                  class="btn btn-default"
+                  target="_blank"
+                  href="https://github.com/yashrajb/DevBlog"
+                  ><i class="fa fa-github"></i> Github</a
+                >
+              </div>
+              <div class="col-lg-6 col-xl-6 col-md-6">
+                  <img
+                    src="images/devblog.PNG"
+                    class="proj-img img-responsive"
+                    alt="cryptos-cli"
+                  />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-xl-6 col-md-6">
+                    <img
+                      src="images/node-chat.PNG"
+                      class="proj-img img-responsive"
+                      alt="cryptos-cli"
+                    />
+                  </div>
+                <div class="col-lg-6 col-xl-6 col-md-6 text">
+                  <h3>Node Chat Application</h3>
+                  <p>
+                      Chat application where user can create room and chat with other users in room.they can send weather information,location,messages.
+                  </p>
+                  <a
+          class="btn btn-default"
+          target="_blank"
+          href="https://radiant-harbor-65503.herokuapp.com/"
+          ><i class="fa fa-globe"></i> Visit</a
+        >
+        <a
+          class="btn btn-default"
+          target="_blank"
+          href="https://github.com/yashrajb/Node-chat-app"
+          ><i class="fa fa-github"></i> Github</a
+        >
+                </div>
+              </div>
+        </div>
+
+      </section>
     <section class="container-fluid" id="exp">
       <div class="container">
         <h2 class="text-center">Experience</h2>
-        <div class="row">
-          <div class=></div>
+        <div class="row" style="border-left:2px solid black;">
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <div class="row">
+              
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <p>Hello world</p>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <p>Hello world</p>
+          </div>
         </div>
       </div>
     </section>

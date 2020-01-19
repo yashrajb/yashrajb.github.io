@@ -3,6 +3,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:title" content="Yashraj Basan" />
+    <meta na="author" content="Yashraj Basan" />
+    <meta property="og:locale" content="gu_in" />
+    <meta
+      name="description"
+      content="Web Developer,Web Designer,Full Stack Developer,Javascript consultant"
+    />
+    <meta
+      property="og:description"
+      content="Web Developer,Web Designer,Full Stack Developer,Javascript consultant"
+    />
+    <link rel="canonical" href="http://yashrajbasan.com" />
+    <meta property="og:url" content="http://yashrajbasan.com" />
+    <meta property="og:site_name" content="Yashraj Basan" />
+    <meta
+      property="og:image"
+      content="http://yashrajbasan.com/images/logo.jpg"
+    />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
@@ -13,6 +31,8 @@
       href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./images/icon.jpg" type="image/jpg" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>
       Yashraj Basan - Web Developer | Web Designer | Full Stack Developer |
       Javascript consultant
@@ -52,7 +72,7 @@
       main {
         background: #444444;
         color: white !important;
-        padding: 250px 0px;
+        padding: 300px 0px;
         text-transform: uppercase;
       }
       .btn-default {
@@ -72,10 +92,10 @@
       }
       #projects {
         padding: 20px 0px;
+        box-shadow: 4px 4px 7px 1px #444444;
       }
-      #projects h2,
-      #exp h2 {
-        padding: 10px 0px;
+      #projects h2 {
+        padding: 15px 0px 20px 0px;
       }
       #projects .btn-default {
         background: #444444;
@@ -101,21 +121,115 @@
       #projects .row:nth-child(4) {
         margin: 70px 0px;
       }
+      #projects .row:nth-child(5) {
+        margin: 70px 0px;
+      }
+      #services {
+        color: white !important;
+        padding-bottom: 43px;
+        padding-top: 10px;
+        box-shadow: 4px 4px 7px 1px #444444;
+      }
+      #services img {
+        width: 80px;
+        margin: 0px auto;
+      }
+      #services h2 {
+        text-align: center;
+        color: #444444;
+        text-transform: capitalize;
+        padding: 15px 0px 25px 0px;
+      }
+      #services h5 {
+        text-align: center;
+        color: #444444;
+        text-transform: uppercase;
+      }
+      #services p {
+        text-align: center;
+        color: #444444;
+      }
+      .company-name {
+        text-transform: capitalize;
+      }
       #exp {
-        box-shadow: inset 6px 6px 7px -3px grey;
-        padding-bottom: 50px;
+        padding: 20px 0px 40px 0px;
       }
       #exp h3 {
         text-transform: capitalize;
       }
-
       #about {
-        box-shadow: inset 6px 6px 7px -3px grey;
+        box-shadow: inset 4px 4px 7px 1px #444444;
+        background: url("./images/owner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 300px 0px;
+        background-attachment: fixed;
       }
+      #about h2 {
+        color: white;
+      }
+      #about p {
+        font-size: 20px;
+        color: white;
+      }
+      #about img {
+        width: 300px;
+        border-radius: 300px;
+      }
+
+      footer {
+        box-shadow: inset 5px 30px 30px 1px #444444;
+        background: #444444;
+        color: white;
+        padding: 120px 0px;
+      }
+      footer .social {
+        width: 50px;
+        display: inline-block;
+        margin-right: 3px;
+        background: white;
+        padding: 10px;
+      }
+
+      @media (max-width: 575.98px) {
+        main h1 {
+          font-size: 25px;
+          margin-top: 0px;
+        }
+        main {
+          padding: 250px 0px;
+        }
+        #about {
+          background-position: center;
+        }
+      }
+
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        main h1 {
+          font-size: 25px;
+          margin-top: 0px;
+        }
+        main {
+          padding: 250px 0px;
+        }
+      }
+      /* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+ Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }  */
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav
+      class="navbar navbar-default navbar-fixed-top"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+    >
       <div class="container">
         <div class="navbar-header">
           <button
@@ -135,37 +249,119 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Portfolio</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li class="active"><a href="#projects">Portfolio</a></li>
+            <li><a href="#exp">Experience</a></li>
+            <li><a href="https://medium.com/@basanyash627" target="_blank">Blog</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a class="btn btn-danger" href="#">Download Resume</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <div class="container">
+      <div class="container" data-aos="fade-right" data-aos-duration="1500">
         <h1>
           Hello, I am Full Stack Developer & Javascript Consultant
         </h1>
-        <a href="#" class="btn btn-default">Know More</a>
+        <a href="#services" class="btn btn-default">Know More</a>
       </div>
     </main>
+    <section
+      class="container-fluid"
+      id="services"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+    >
+      <div class="container">
+        <h2>I can help you in</h2>
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <img
+              src="./images/web-design.png"
+              class="img-responsive"
+              alt="web design service"
+            />
+            <h5>Web Design</h5>
+            <p>
+              I can build pixel perfect with modern layout website for you or
+              your business
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <img
+              src="./images/web-development.png"
+              class="img-responsive"
+              alt="web design service"
+            />
+            <h5>Web Development</h5>
+            <p>
+              I like to building web application from scratch with scalable
+              backend and elegant user interface.
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <img
+              src="./images/consulting.png"
+              class="img-responsive"
+              alt="web design service"
+            />
+            <h5>Consulting</h5>
+            <p>
+              I can help your employees to write efficient javascript code,
+              scalable architecture for web application
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="container-fluid" id="projects">
       <div class="container">
-        <h2 class="text-center">Some Recent Projects</h2>
-        <div class="row">
+        <h2 class="text-center" data-aos="fade-down" data-aos-duration="1500">
+          Some Recent Projects
+        </h2>
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
           <div class="col-lg-6 col-xl-6 col-md-6">
             <img
-              src="images/pragmafox.PNG"
+              src="images/drail-resume-builder.png"
               style="border:1px solid lightgrey;"
               class="proj-img img-responsive"
-              alt="libro"
+              alt="drail resume builder"
             />
           </div>
           <div class="col-lg-6 col-xl-6 col-md-6 text">
-            <h3>pragmafox</h3>
+            <h3>Drail - Resume Builder</h3>
+            <p>
+              Drail is progressive web app which helps you to build resume and
+              you can download resume in pdf form. i built this project using
+              reactjs and redux for state management. i also used npm package to
+              convert component into pdf
+            </p>
+            <a
+              class="btn btn-default"
+              target="_blank"
+              href="https://agile-mountain-11525.herokuapp.com/"
+              ><i class="fa fa-globe"></i> Visit</a
+            >
+            <a
+              class="btn btn-default"
+              target="_blank"
+              href="https://github.com/yashrajb/Drail-Resume-Builder"
+              ><i class="fa fa-github"></i> Github</a
+            >
+          </div>
+        </div>
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
+          <div class="col-lg-6 col-xl-6 col-md-6 hidden-xl hidden-lg hidden-md">
+            <img
+              src="images/pragmafox.PNG"
+              class="proj-img img-responsive"
+              alt="pragmafox"
+            />
+          </div>
+          <div class="col-lg-6 col-xl-6 col-md-6 text">
+            <h3>Pragmafox</h3>
             <p>
               Pragmafox is a company which offer affordable services to a
               startup and small business. They offer graphic design, web
@@ -179,8 +375,22 @@
               ><i class="fa fa-globe"></i> Visit</a
             >
           </div>
+          <div class="col-lg-6 col-xl-6 col-md-6 hidden-xs hidden-sm">
+            <img
+              src="images/pragmafox.PNG"
+              class="proj-img img-responsive"
+              alt="pragmafox"
+            />
+          </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
+          <div class="col-lg-6 col-xl-6 col-md-6">
+            <img
+              src="images/devblog.PNG"
+              class="proj-img img-responsive"
+              alt="devblog"
+            />
+          </div>
           <div class="col-lg-6 col-xl-6 col-md-6 text">
             <h3>DevBlog</h3>
             <p>
@@ -201,20 +411,13 @@
               ><i class="fa fa-github"></i> Github</a
             >
           </div>
-          <div class="col-lg-6 col-xl-6 col-md-6">
-            <img
-              src="images/devblog.PNG"
-              class="proj-img img-responsive"
-              alt="cryptos-cli"
-            />
-          </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6 col-xl-6 col-md-6">
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
+          <div class="col-lg-6 col-xl-6 col-md-6 hidden-xl hidden-lg hidden-md">
             <img
               src="images/node-chat.PNG"
               class="proj-img img-responsive"
-              alt="cryptos-cli"
+              alt="node chat application"
             />
           </div>
           <div class="col-lg-6 col-xl-6 col-md-6 text">
@@ -230,37 +433,44 @@
               ><i class="fa fa-globe"></i> Visit</a
             >
             <a
-              class="btn btn-default"
-              target="_blank"
-              href="https://github.com/yashrajb/Node-chat-app"
-              ><i class="fa fa-github"></i> Github</a
-            >
+            class="btn btn-default"
+            target="_blank"
+            href="https://github.com/yashrajb/Node-chat-app"
+            ><i class="fa fa-github"></i> Github</a
+          >
+          </div>
+          <div class="col-lg-6 col-xl-6 col-md-6 hidden-xs hidden-sm">
+            <img
+              src="images/node-chat.PNG"
+              class="proj-img img-responsive"
+              alt="pragmafox"
+            />
           </div>
         </div>
       </div>
     </section>
     <section class="container-fluid" id="exp">
       <div class="container">
-        <h2 class="text-center">Experience</h2>
-        <ul>
+        <h2 class="text-center" data-aos="fade-down" data-aos-duration="1500">
+          Experience
+        </h2>
+        <ul data-aos="fade-right" data-aos-duration="1500">
           <li>
             <h3>javascript consultant</h3>
-            <p>qxf2 services</p>
+            <p class="company-name">qxf2 services</p>
             <p>9/2019 - present</p>
             <p>
               Provided service to company to guide them in understanding react
               applications and architecture,writing test cases of react
-              applications, continous integration with circle ci and
-              jenkins,feasible workflow for other developers so they can
-              collabarate with other team members. created documentation of git
-              submodule so other developers can understand better way, written
-              some custom selectors of testcafe framework. supported their
-              intiative of project.
+              applications.created documentation of git submodule so other
+              developers can understand better way, written some custom
+              selectors of testcafe framework. supported their intiative of
+              project.
             </p>
           </li>
           <li>
             <h3>Full Stack Developer</h3>
-            <p>qxf2 services</p>
+            <p class="company-name">Xcitech Technologies</p>
             <p>8/2019 - 8/2019</p>
             <p>
               Developed MEVN stack applications, written clean and efficient
@@ -272,7 +482,7 @@
           </li>
           <li>
             <h3>Full Stack Developer (Intern)</h3>
-            <p>js tiger</p>
+            <p class="company-name">js tiger</p>
             <p>7/2018 - 8/2018</p>
             <p>
               worked as MEAN stack developer,solved bugs and issues related to
@@ -285,23 +495,47 @@
     </section>
     <section class="container-fluid" id="about">
       <div class="container">
-        <h2 class="text-center">About</h2>
-        <div class="col-md-7 col-xl-7 col-lg-7">
-          <img src="./images/author.jpeg" class="img-responsive" />
-        </div>
-        <div class="col-md-5 col-xl-5 col-lg-5">
-          <p>
-            Hello, I am yashraj basan passionate full stack developer and quick
-            learner.i started making websites when i was in 10th class.after i
-            started learning web application development . i started with php
-            and mysql.i worked with modern web technologies like
-            React,Node,Mongodb,socket.io and also worked with traditional
-            technologies like php,mysql,java,.net. besides coding i like to read
-            books on self development,travelling,riding on my fat tyre
-            bicycle,learning new skills.
-          </p>
-        </div>
+        <h2 data-aos="fade-right" data-aos-duration="1500">About</h2>
+        <p data-aos="fade-right" data-aos-duration="1500">
+          When i was in 10<sup>th</sup> std i got my first laptop. i was so
+          curious about laptop i started learning from internet. i learned some
+          terminal tricks like watching star wars in cmd. after i started
+          learning html and css from jon duckett book "HTML & CSS: Design and
+          Build Websites". after creating some websites of coffee shops and
+          photography portfolios. after slowly slowly i started learning web
+          applications development.now, i pursuing computer science engineering
+          from parul university and also working as web developer.
+        </p>
       </div>
     </section>
+    <footer class="text-center" id="contact">
+      <p data-aos="fade-down" data-aos-duration="1500">
+        <a href="mailto:basanyash627@gmail.com" target="_blank">
+          <img src="images/email.svg" class="img-responsive linkedin social" />
+        </a>
+        <a href="https://github.com/yashrajb" target="_blank">
+          <img src="images/github.svg" class="img-responsive github social" />
+        </a>
+        <a href="https://www.instagram.com/yashraj.dev" target="_blank">
+          <img src="images/instagram.svg" class="img-responsive insta social"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/yashraj-basan-11b915157/"
+          target="_blank"
+        >
+          <img
+            src="images/linkedin.svg"
+            class="img-responsive linkedin social"
+          />
+        </a>
+      </p>
+      <p data-aos="fade-down" data-aos-duration="1500">
+        &copy; yashrajbasan 2019
+      </p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="Yashraj Basan" />
     <meta
       property="og:image"
-      content="http://yashrajbasan.com/images/logo.jpg"
+      content="http://yashrajbasan.com/images/logo.ico"
     />
     <link
       rel="stylesheet"
@@ -31,7 +31,7 @@
       href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="./images/icon.jpg" type="image/jpg" />
+    <link rel="icon" href="http://yashrajbasan.com/images/logo.ico" type="image/icon" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>
       Yashraj Basan - Web Developer | Web Designer | Full Stack Developer |
@@ -43,44 +43,48 @@
       }
       .navbar-default {
         border-radius: 0px;
-        background: #444444;
+        background: #eff0f3;
         padding: 7px 0px;
-        border: 1px solid #444444;
-        box-shadow: 3px 3px 3px black;
+        border: 1px solid #eff0f3;
       }
       .navbar-brand {
-        color: white !important;
-        text-transform: uppercase;
+        color: #0d0d0d !important;
+        text-transform: capitalize;
       }
       .navbar .btn-danger {
-        background-color: red !important;
+        background-color: #ff8e3c !important;
         border-radius: 0px;
         padding: 10px;
-        border-color: red !important;
+        border-color: #ff8e3c !important;
         margin-top: 3px;
-        box-shadow: 4px 4px 7px black;
+        box-shadow: 4px 4px 7px grey;
       }
       .navbar-default .navbar-nav > li > a,
       .navbar-default .navbar-nav > .active > a,
       .navbar-default .navbar-nav > .active > a:focus,
       .navbar-default .navbar-nav > .active > a:hover {
-        color: white !important;
+        color: #0d0d0d!important;
         background: transparent;
-        text-transform: uppercase;
-        font-size: 13px;
+        text-transform: lowercase;
+        font-size: 15px;
       }
       main {
-        background: #444444;
+        background:#eff0f3;
         color: white !important;
-        padding: 300px 0px;
+        padding: 290px 0px 0px 0px;
         text-transform: uppercase;
       }
-      .btn-default {
+      .main-img {
+        margin:-110px 0px 0px 0px;
+      }
+      .btn-default,.btn-default:hover {
         border-radius: 0px;
-        background: transparent;
-        color: white;
+        background: #ff8e3c;
+        color: #0d0d0d;
+        border:0px;
       }
       main h1 {
+        color:#0d0d0d;
         font-size: 50px;
         margin-top: 40px;
       }
@@ -91,24 +95,28 @@
         margin-right: 2px;
       }
       #projects {
-        padding: 20px 0px;
-        box-shadow: 4px 4px 7px 1px #444444;
+        padding: 20px 0px 40px 0px;
       }
       #projects h2 {
+        color:#0d0d0d;
         padding: 15px 0px 20px 0px;
       }
       #projects .btn-default {
-        background: #444444;
+        background: #ff8e3c;
+        color:#0d0d0d;
       }
       .proj-img {
         box-shadow: 4px 4px 5px 2px grey;
+        border:6px solid #ff8e3c;
       }
       .text > p {
         font-size: 18px;
+        color:#2a2a2a !important;
       }
       .text h3 {
         font-size: 24px;
         text-transform: capitalize;
+        color:#0d0d0d !important;
       }
       #projects .row:nth-child(2) {
         margin: 30px 0px 10px 0px;
@@ -124,73 +132,125 @@
       #projects .row:nth-child(5) {
         margin: 70px 0px;
       }
-      #services {
-        color: white !important;
-        padding-bottom: 43px;
-        padding-top: 10px;
-        box-shadow: 4px 4px 7px 1px #444444;
-      }
-      #services img {
-        width: 80px;
-        margin: 0px auto;
-      }
-      #services h2 {
-        text-align: center;
-        color: #444444;
-        text-transform: capitalize;
-        padding: 15px 0px 25px 0px;
-      }
-      #services h5 {
-        text-align: center;
-        color: #444444;
-        text-transform: uppercase;
-      }
-      #services p {
-        text-align: center;
-        color: #444444;
+      #projects #showAndHide .row:nth-child(2) {
+        margin: 70px 0px;
       }
       .company-name {
         text-transform: capitalize;
       }
       #exp {
+        background:#eff0f3;
         padding: 20px 0px 40px 0px;
+      }
+      #exp h2 {
+        color:#0d0d0d
       }
       #exp h3 {
         text-transform: capitalize;
       }
       #about {
-        box-shadow: inset 4px 4px 7px 1px #444444;
-        background: url("./images/owner.jpg");
+        /* box-shadow: inset 4px 4px 7px 1px #444444; */
+       /* background: url("./images/author.png"); */
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 300px 0px;
+        padding: 100px 0px;
         background-attachment: fixed;
+        
       }
-      #about h2 {
-        color: white;
+      #about p, #about h2{
+        color:#0d0d0d !important;
       }
+      
       #about p {
         font-size: 20px;
         color: white;
       }
       #about img {
-        width: 300px;
-        border-radius: 300px;
+        width:600px;
       }
 
       footer {
-        box-shadow: inset 5px 30px 30px 1px #444444;
-        background: #444444;
-        color: white;
+        background: #eff0f3;
         padding: 120px 0px;
       }
       footer .social {
         width: 50px;
         display: inline-block;
         margin-right: 3px;
-        background: white;
+        background:white;
         padding:10px;
       }
+
+
+      .cf:before, .cf:after {
+	content: " ";
+	display: table;
+}
+.cf:after { clear: both; }
+.cf { *zoom: 1;
+}
+.p {
+	margin:0 0 1em;
+	padding:10px;
+	color:white;
+}
+.line {
+	position:relative;
+	width:80%;
+	margin:auto;
+	overflow:hidden;
+}
+.line:after {
+	content:" ";
+	width:1px;
+	background:#ff8e3c;
+	position:absolute;
+	z-index:1;
+	top:0;
+	bottom:0;
+	left:50%;
+}
+.fl { float:left; }
+.fr { float:right; }
+.block {
+	width:50%;
+	position:relative;
+	padding:0 50px 0 0;
+	clear:both
+}
+.fr { padding:0 0 0 50px; }
+.circle {
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	background:#ff8e3c;
+	float:right;
+	margin-right:-75px;
+	margin-top:1em;
+	position:relative;
+	z-index:2;
+}
+.fr .circle {
+	float:left;
+	margin-left:-75px
+}
+.circle.first:before,.circle.last:before{
+	content:" ";
+	position:absolute;
+	width:4px;
+	left:50%;
+	margin:0 0 0 -2px;
+	background:#eff0f3;
+	bottom:100%;
+	height:99em;
+	z-index:3;
+}
+.circle.last:before{
+	bottom:auto;
+	top:100%;	
+}
+
+
 
       @media (max-width: 575.98px) {
         main h1 {
@@ -261,22 +321,29 @@ Large devices (desktops, 992px and up)
     </nav>
     <main>
       <div class="container" data-aos="fade-right" data-aos-duration="1500">
-        <h1>
-          Hello, i create websites and web app which works.
-        </h1>
-        <a href="#projects" class="btn btn-default">Know More</a>
+        <div class="row">
+          <div class="col-lg-7 col-md-7 col-xl-7">
+            <h1>
+              Hi, i create websites and web app that works.
+            </h1>
+            <a href="#projects" class="btn btn-default">Know More</a>
+          </div>
+          <div class="col-lg-5 col-md-5 col-xl-5">
+            <img class="main-img img-responsive" src="./images/Coding_SVG.svg" />
+          </div>
+        </div>
+        
       </div>
     </main>
     <section class="container-fluid" id="projects">
       <div class="container">
         <h2 class="text-center" data-aos="fade-down" data-aos-duration="1500">
-          Some Recent Projects
+          Projects
         </h2>
         <div class="row" data-aos="fade-right" data-aos-duration="1500">
           <div class="col-lg-6 col-xl-6 col-md-6">
             <img
               src="images/memestar.png"
-              style="border:1px solid lightgrey;"
               class="proj-img img-responsive"
               alt="memestar"
             />
@@ -297,10 +364,44 @@ Large devices (desktops, 992px and up)
           </div>
         </div>
         <div class="row" data-aos="fade-right" data-aos-duration="1500">
-            <div class="col-lg-6 col-xl-6 col-md-6 hidden-xl hidden-lg hidden-md">
+          <div class="col-lg-6 col-xl-6 col-md-6 hidden-xl hidden-lg hidden-md">
+              <img
+                src="images/web-dev-portfolio.PNG"
+                class="proj-img img-responsive"
+                alt="dev portfolio"
+              />
+            </div>
+          <div class="col-lg-6 col-xl-6 col-md-6 text">
+              <h3>Dev Portfolio</h3>
+              <p>
+                dev portfolio is open source customizable portfolio for developers. portfolio is responsive and created using bootstrap framework.
+                content of blog, experience, projects, about on markdown.so, developers have to only add or edit markdown files. this makes so easy to manage the content of website
+              </p>
+              <a
+                class="btn btn-default"
+                target="_blank"
+                href="/Drail-Resume-Builder"
+                ><i class="fa fa-globe"></i> Visit</a
+              >
+              <a
+                class="btn btn-default"
+                target="_blank"
+                href="https://github.com/yashrajb/Drail-Resume-Builder"
+                ><i class="fa fa-github"></i> Github</a
+              >
+            </div>
+        <div class="col-lg-6 col-xl-6 col-md-6 hidden-xs hidden-sm">
+          <img
+                src="images/web-dev-portfolio.PNG"
+                class="proj-img img-responsive"
+                alt="dev portfolio"
+              />
+        </div>
+      </div>
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
+            <div class="col-lg-6 col-xl-6 col-md-6">
                 <img
                   src="images/drail-resume-builder.png"
-                  style="border:1px solid lightgrey;"
                   class="proj-img img-responsive"
                   alt="drail resume builder"
                 />
@@ -326,44 +427,68 @@ Large devices (desktops, 992px and up)
                   ><i class="fa fa-github"></i> Github</a
                 >
               </div>
-          <div class="col-lg-6 col-xl-6 col-md-6 hidden-xs hidden-sm">
-            <img
-              src="images/drail-resume-builder.png"
-              style="border:1px solid lightgrey;"
-              class="proj-img img-responsive"
-              alt="drail resume builder"
-            />
-          </div>
         </div>
-        <div class="row" data-aos="fade-right" data-aos-duration="1500">
-            <div class="col-lg-6 col-xl-6 col-md-6">
+        <div id="showAndHide" style="display:none">
+          <div class="row" data-aos="fade-right" data-aos-duration="1500">
+            <div class="col-lg-6 col-xl-6 col-md-6 hidden-xl hidden-lg hidden-md">
                 <img
-                  src="images/devblog.PNG"
+                  src="images/node-chat.PNG"
                   class="proj-img img-responsive"
-                  alt="devblog"
+                  alt="node chat"
                 />
               </div>
             <div class="col-lg-6 col-xl-6 col-md-6 text">
-                <h3>DevBlog</h3>
+                <h3>Node Chat</h3>
                 <p>
-                  Devblog is fullstack javascript web application.this is a
-                  multiuser blogging system.i created using node.js and mongodb.i
-                  also used Google Oauth API and tinymce editor.
+                  Node chat is  chatting web app where people can create or join the rooms and can chat with other peoples, people can share their weather, location.
+                  whole project is created using nodejs and socketIO and to share weather information and location i used openweather and google API respectively.
                 </p>
                 <a
                   class="btn btn-default"
                   target="_blank"
-                  href="https://floating-everglades-10580.herokuapp.com/"
+                  href="https://radiant-harbor-65503.herokuapp.com/"
                   ><i class="fa fa-globe"></i> Visit</a
                 >
-                <a
-                  class="btn btn-default"
-                  target="_blank"
-                  href="https://github.com/yashrajb/DevBlog"
-                  ><i class="fa fa-github"></i> Github</a
-                >
               </div>
+          <div class="col-lg-6 col-xl-6 col-md-6 hidden-xs hidden-sm">
+            <img
+                  src="images/node-chat.PNG"
+                  class="proj-img img-responsive"
+                  alt="dev portfolio"
+                />
+          </div>
         </div>
+
+        <div class="row" data-aos="fade-right" data-aos-duration="1500">
+          <div class="col-lg-6 col-xl-6 col-md-6">
+              <img
+                src="images/devblog.PNG"
+                class="proj-img img-responsive"
+                alt="devblog"
+              />
+            </div>
+          <div class="col-lg-6 col-xl-6 col-md-6 text">
+              <h3>DevBlog</h3>
+              <p>
+                Devblog is fullstack javascript web application.this is a
+                multiuser blogging system.i created using node.js and mongodb.i
+                also used Google Oauth API and tinymce editor.
+              </p>
+              <a
+                class="btn btn-default"
+                target="_blank"
+                href="https://floating-everglades-10580.herokuapp.com/"
+                ><i class="fa fa-globe"></i> Visit</a
+              >
+              <a
+                class="btn btn-default"
+                target="_blank"
+                href="https://github.com/yashrajb/DevBlog"
+                ><i class="fa fa-github"></i> Github</a>
+            </div>
+      </div>
+        </div>
+          <p class="text-center"><button id="see-all" class="btn btn-default btn-lg">Show</button></p>
       </div>
     </section>
     <section class="container-fluid" id="exp">
@@ -371,52 +496,85 @@ Large devices (desktops, 992px and up)
         <h2 class="text-center" data-aos="fade-down" data-aos-duration="1500">
           Experience
         </h2>
-        <ul data-aos="fade-right" data-aos-duration="1500">
-            <li>
-                <h3>nodejs developer</h3>
-                <p class="company-name">appitsimple</p>
-                <p>9/2019 - present</p>
-              </li>
-          <li>
-            <h3>javascript consultant</h3>
-            <p class="company-name">qxf2 services</p>
-            <p>09/2019 - 06/2019</p>
-            <p>
-              Provided service to the company to guide them in understanding react applications and architecture, writing test cases of react applications. created documentation of git submodule so other developers can understand better ways, written maintainable javascript code with best practice. supported their initiative of the project, worked on the Jenkins and docker created the services which automate the Jira task.
-            </p>
-          </li>
-          <li>
-            <h3>Full Stack Developer</h3>
+        <div class="line">
+          <div class=" cf">
+                <div class="block fr" data-aos="fade-right" data-aos-duration="1500">
+                  <p class="p">
+                    <span class="circle first"></span>
+                    <h3>nodejs developer</h3>
+                    <p class="company-name">appitsimple</p>
+                    <p>9/2019 - present</p>
+                  </p>
+                </div>
+
+                <div class="block fl" data-aos="fade-left" data-aos-duration="1500">
+                  <p class="p">
+                    <span class="circle"></span>
+                    <h3>javascript consultant</h3>
+                    <p class="company-name">qxf2 services</p>
+                    <p>09/2019 - 06/2019</p>
+                    <p>helping the team develop a test automation framework using TestCafe,
+                      assisting the team when they are stuck on JavaScript problems,
+                      developing a Career Quiz web application in native JavaScript,
+                      building a resume builder application using ReactJS,
+                      working on an application to convert CSV data into Neo4j graph database,
+                      exploring and developing a test metrics dashboard,
+                      developing a utility script for automating the documentation of the Cucumber Step, 
+                      Definitions on Confluence,
+                      helping in analysing GQL queries in the React application,
+                      helping with the setup Jenkins Credentials and Tokens plugin,
+                      developing technical documentation of Jest framework by giving illustrative examples, 
+                      developing documentation on git submodules with technical illustrations
+                    </p>
+                  </p>
+                </div>
+
+                <div class="block fr" data-aos="fade-right" data-aos-duration="1500">
+                  <p class="p">
+                    <span class="circle"></span>
+                    <h3>Full Stack Developer</h3>
             <p class="company-name">Xcitech Technologies</p>
             <p>8/2019 - 8/2019</p>
             <p>
               Built whole MEVN stack web apps from frontend to backend, written well maintained, readable and scalable code of frontend and backend. designed and written scalable restful APIS with best practice,  developed state management architecture using VUEX. created JWT authentication and also deployed on Heroku servers.
             </p>
-          </li>
-          <li>
-            <h3>Full Stack Developer (Intern)</h3>
-            <p class="company-name">js tiger</p>
-            <p>7/2018 - 8/2018</p>
-            <p>
-              I worked as MEAN stack developer.worked with typescript.mostly worked on Frontend. created elegant forms and solved bugs.i also created some Backend rest APIS 
-            </p>
-          </li>
-        </ul>
+                  </p>
+                </div>
+
+                <div class="block fl" data-aos="fade-left" data-aos-duration="1500">
+                  <p class="p">
+                    <span class="circle"></span>
+                    <h3>Full Stack Developer (Intern)</h3>
+                    <p class="company-name">js tiger</p>
+                    <p>7/2018 - 8/2018</p>
+                    <p>
+                      I worked as MEAN stack developer.worked with typescript.mostly worked on Frontend. created elegant forms and solved bugs.i also created some Backend rest APIS 
+                    </p>
+                  </p>
+                </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="container-fluid" id="about">
       <div class="container">
-        <h2 data-aos="fade-right" data-aos-duration="1500">About</h2>
+        <div class="row">
+          
+          <div class="col-md-5 col-lg-5 col-xl-5">
+            <h2 data-aos="fade-right" data-aos-duration="1500">About</h2>
         <p data-aos="fade-right" data-aos-duration="1500">
-          When i was in 10<sup>th</sup> std i got my first laptop. i was so
-          curious about laptop i started learning from internet. i learned some
-          terminal tricks like watching star wars in cmd. after i started
-          learning html and css from jon duckett book "HTML & CSS: Design and
-          Build Websites". after creating some websites of coffee shops and
-          photography portfolios. after slowly slowly i started learning web
-          applications development.now, i pursuing computer science engineering
-          from parul university and also working as web developer.
+          Right from my school days, I was always passionate about building websites. Whenever 
+          I create a website or a web application I feel like I am GOD. I learned HTML and CSS from 
+          Jon Duckett’s book and later I started learning Javascript on my own.
+          i worked with modern web technologies and as well as old technologies.
+          i have a bachelor's degree in computer science and engineering. 
+          besides programming, i enjoy playing guitar, reading self improvement books and learning new skills.
         </p>
+          </div>
+          <div class="col-md-7 col-lg-7 col-xl-7">
+            <img src="./images/author.jpg" class="img-responsive"/>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="text-center" id="contact">
@@ -446,6 +604,30 @@ Large devices (desktops, 992px and up)
       </p>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      var showOrHide = document.getElementById("showAndHide");
+      var seeAll = document.getElementById("see-all");
+
+      seeAll.addEventListener("click",function(){
+
+
+        if(showOrHide.style.display==="none"){
+
+          showOrHide.style.display = "block";
+          seeAll.innerText = "Hide";
+
+        }else{
+
+
+          showOrHide.style.display = "none";
+          seeAll.innerText = "Show"
+
+        }
+
+
+      })
+
+    </script>
     <script>
       AOS.init();
     </script>

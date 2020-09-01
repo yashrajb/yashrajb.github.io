@@ -71,7 +71,7 @@
       main {
         background:#eff0f3;
         color: white !important;
-        padding: 290px 0px 0px 0px;
+        padding: 290px 0px 290px 0px;
         text-transform: uppercase;
       }
       .main-img {
@@ -138,145 +138,75 @@
       .company-name {
         text-transform: capitalize;
       }
-      #exp {
-        background:#eff0f3;
-        padding: 20px 0px 40px 0px;
-      }
-      #exp h2 {
-        color:#0d0d0d
-      }
-      #exp h3 {
-        text-transform: capitalize;
-      }
       #about {
         /* box-shadow: inset 4px 4px 7px 1px #444444; */
        /* background: url("./images/author.png"); */
-        background-repeat: no-repeat;
-        background-size: cover;
+        background:#eff0f3;
         padding: 100px 0px;
-        background-attachment: fixed;
-        
       }
       #about p, #about h2{
         color:#0d0d0d !important;
       }
-      
+
       #about p {
         font-size: 20px;
-        color: white;
       }
       #about img {
         width:600px;
       }
 
       footer {
-        background: #eff0f3;
         padding: 120px 0px;
       }
       footer .social {
         width: 50px;
         display: inline-block;
         margin-right: 3px;
-        background:white;
+        background:#eff0f3;
         padding:10px;
       }
 
-
-      .cf:before, .cf:after {
-	content: " ";
-	display: table;
-}
-.cf:after { clear: both; }
-.cf { *zoom: 1;
-}
-.p {
-	margin:0 0 1em;
-	padding:10px;
-	color:white;
-}
-.line {
-	position:relative;
-	width:80%;
-	margin:auto;
-	overflow:hidden;
-}
-.line:after {
-	content:" ";
-	width:1px;
-	background:#ff8e3c;
-	position:absolute;
-	z-index:1;
-	top:0;
-	bottom:0;
-	left:50%;
-}
-.fl { float:left; }
-.fr { float:right; }
-.block {
-	width:50%;
-	position:relative;
-	padding:0 50px 0 0;
-	clear:both
-}
-.fr { padding:0 0 0 50px; }
-.circle {
-	width:30px;
-	height:30px;
-	border-radius:50%;
-	background:#ff8e3c;
-	float:right;
-	margin-right:-75px;
-	margin-top:1em;
-	position:relative;
-	z-index:2;
-}
-.fr .circle {
-	float:left;
-	margin-left:-75px
-}
-.circle.first:before,.circle.last:before{
-	content:" ";
-	position:absolute;
-	width:4px;
-	left:50%;
-	margin:0 0 0 -2px;
-	background:#eff0f3;
-	bottom:100%;
-	height:99em;
-	z-index:3;
-}
-.circle.last:before{
-	bottom:auto;
-	top:100%;	
-}
-
-
-
       @media (max-width: 575.98px) {
-        main h1 {
+         main h1 {
           font-size: 25px;
           margin-top: 0px;
         }
-        main {
+         main {
           padding: 250px 0px;
         }
-        #about {
-          background-position: center;
+	#about {
+        padding:65px 0px; 
+       }
+       #about p {
+         margin:10px 0px;
         }
       }
 
       @media (min-width: 576px) and (max-width: 767.98px) {
         main h1 {
-          font-size: 25px;
+          font-size: 30px;
           margin-top: 0px;
         }
-        main {
+         main {
           padding: 250px 0px;
         }
+	#about {
+        padding:65px 0px; 
+       }
+	#about p {
+         margin:10px 0px;
+        }
       }
-      /* Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
-
+      /*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main h1 {
+    margin-top: 0px;
+  }
+   main {
+    padding: 250px 0px;
+  }
+}
+/*
 Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) { ... }
 
@@ -309,30 +239,24 @@ Large devices (desktops, 992px and up)
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#projects">Portfolio</a></li>
-            <li><a href="#exp">Experience</a></li>
+            <li class="active"><a href="#projects">Projects</a></li>
             <li><a href="https://medium.com/@basanyash627" target="_blank">Blog</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a class="btn btn-danger" target="_blank" href="./Yashraj-Resume.pdf">Resume</a></li>
+            <li><a class="btn btn-danger" target="_blank" href="./Yashraj-Resume.pdf">download Resume</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
       <div class="container" data-aos="fade-right" data-aos-duration="1500">
-        <div class="row">
-          <div class="col-lg-7 col-md-7 col-xl-7">
             <h1>
               Hi, i create websites and web app that works.
             </h1>
             <a href="#projects" class="btn btn-default">Know More</a>
-          </div>
-          <div class="col-lg-5 col-md-5 col-xl-5">
-            <img class="main-img img-responsive" src="./images/Coding_SVG.svg" />
-          </div>
+
         </div>
-        
+
       </div>
     </main>
     <section class="container-fluid" id="projects">
@@ -491,87 +415,25 @@ Large devices (desktops, 992px and up)
           <p class="text-center"><button id="see-all" class="btn btn-default btn-lg">Show</button></p>
       </div>
     </section>
-    <section class="container-fluid" id="exp">
-      <div class="container">
-        <h2 class="text-center" data-aos="fade-down" data-aos-duration="1500">
-          Experience
-        </h2>
-        <div class="line">
-          <div class=" cf">
-                <div class="block fr" data-aos="fade-right" data-aos-duration="1500">
-                  <p class="p">
-                    <span class="circle first"></span>
-                    <h3>nodejs developer</h3>
-                    <p class="company-name">appitsimple</p>
-                    <p>9/2019 - present</p>
-                  </p>
-                </div>
-
-                <div class="block fl" data-aos="fade-left" data-aos-duration="1500">
-                  <p class="p">
-                    <span class="circle"></span>
-                    <h3>javascript consultant</h3>
-                    <p class="company-name">qxf2 services</p>
-                    <p>09/2019 - 06/2019</p>
-                    <p>helped the team develop a test automation framework using TestCafe,
-                      assisted the team when they are stuck on JavaScript problems,
-                      developed a Career Quiz web application in native JavaScript,
-                      created a resume builder application using ReactJS,
-                      worked on an application to convert CSV data into Neo4j graph database,
-                      explored and developed a test metrics dashboard,
-                      developed a utility script for automating the documentation of the Cucumber Step, 
-                      Definitions on Confluence,
-                      helped them in analysing GQL queries in the React application,
-                      helped with the setup Jenkins Credentials and Tokens plugin,
-                      developed technical documentation of Jest framework by giving illustrative examples, 
-                      developed documentation on git submodules with technical illustrations
-                    </p>
-                  </p>
-                </div>
-
-                <div class="block fr" data-aos="fade-right" data-aos-duration="1500">
-                  <p class="p">
-                    <span class="circle"></span>
-                    <h3>Full Stack Developer</h3>
-            <p class="company-name">Xcitech Technologies</p>
-            <p>8/2019 - 8/2019</p>
-            <p>
-              Built whole MEVN stack web apps from frontend to backend, written well maintained, readable and scalable code of frontend and backend. designed and written scalable restful APIS with best practice,  developed state management architecture using VUEX. created JWT authentication and also deployed on Heroku servers.
-            </p>
-                  </p>
-                </div>
-
-                <div class="block fl" data-aos="fade-left" data-aos-duration="1500">
-                  <p class="p">
-                    <span class="circle"></span>
-                    <h3>Full Stack Developer (Intern)</h3>
-                    <p class="company-name">js tiger</p>
-                    <p>7/2018 - 8/2018</p>
-                    <p>
-                      I worked as MEAN stack developer.worked with typescript.mostly worked on Frontend. created elegant forms and solved bugs.i also created some Backend rest APIS 
-                    </p>
-                  </p>
-                </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="container-fluid" id="about">
       <div class="container">
         <div class="row">
-          
-          <div class="col-md-5 col-lg-5 col-xl-5">
-            <h2 data-aos="fade-right" data-aos-duration="1500">About</h2>
+           <div class="col-lg-6 col-md-6 col-xl-6 hidden-md hidden-xl hidden-lg">
+<h2 data-aos="fade-right" data-aos-duration="1500">About me</h2>
+	<img src="./images/author.jpg" class="img-responsive"/>	   
+</div>
+          <div class="col-md-6 col-lg-6 col-xl-6">
+            <h2 class="hidden-xs hidden-sm" data-aos="fade-right" data-aos-duration="1500">About me</h2>
         <p data-aos="fade-right" data-aos-duration="1500">
-          Right from my school days, I was always passionate about building websites. Whenever 
-          I create a website or a web application I feel like I am GOD. I learned HTML and CSS from 
+          Right from my school days, I was always passionate about building websites. Whenever
+          I create a website or a web application I feel like I am GOD. I learned HTML and CSS from
           Jon Duckett’s book and later I started learning Javascript on my own.
           i worked with modern web technologies and as well as old technologies.
-          i have a bachelor's degree in computer science and engineering. 
+          i have a bachelor's degree in computer science and engineering.
           besides programming, i enjoy playing guitar, reading self improvement books and learning new skills.
         </p>
           </div>
-          <div class="col-md-7 col-lg-7 col-xl-7">
+          <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
             <img src="./images/author.jpg" class="img-responsive"/>
           </div>
         </div>

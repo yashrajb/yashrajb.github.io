@@ -82,12 +82,10 @@
   <body>
     <h1>Auto verify OTP on the web using javasacript</h1>
     <div id="form">
-      <form action="/">
         Enter OTP here:
         <input type="text" autocomplete="one-time-code" inputmode="numeric" />
-      </form>
+      
     </div>
-
     <div id="showMessage"></div>
     <script>
       if ("OTPCredential" in window) {
@@ -97,15 +95,7 @@
           );
           if (!input) return;
           const ac = new AbortController();
-          const form = input.closest("form");
-          if (form) {
-            form.addEventListener("submit", (e) => {
-              e.preventDefault();
-              ac.abort();
-              document.getElementById("form").style.display = "none";
-              document.getElementById("showMessage").innerText = 'document submitted'
-            });
-          }
+          
           navigator.credentials
             .get({
               otp: { transport: ["sms"] },
@@ -113,8 +103,6 @@
             })
             .then((otp) => {
               let {code} = otp;
-              input.value = code;
-              form.submit()
             })
             .catch((err) => {
               console.log(err);

@@ -1,4 +1,4 @@
-<html lang="en">
+<!-- <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,5 +60,60 @@
       <img src="./images/undermaintenance.webp" />
       <h1>Site is undermaintance</h1>
     </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web OTP API Demo</title>
+    <meta author="jyotishman saikia"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 500px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Auto verify OTP on the web using javasacript</h1>
+    <div>
+      <form action="/">
+        Enter OTP here:
+        <input type="text" autocomplete="one-time-code" inputmode="numeric" />
+      </form>
+    </div>
+    <script>
+      if ("OTPCredential" in window) {
+        window.addEventListener("DOMContentLoaded", (e) => {
+          const input = document.querySelector(
+            'input[autocomplete="one-time-code"]'
+          );
+          // if (!input) return;
+          // const ac = new AbortController();
+          // const form = input.closest("form");
+          // if (form) {
+          //   form.addEventListener("submit", (e) => {
+          //     ac.abort();
+          //   });
+          // }
+          navigator.credentials
+            .get({
+              otp: { transport: ["sms"] },
+              signal: ac.signal,
+            })
+            .then((otp) => {
+              console.log("otp",otp);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

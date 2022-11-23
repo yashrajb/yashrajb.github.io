@@ -103,6 +103,7 @@
             })
             .then((otp) => {
               let {code} = otp;
+              input.value = code;
             })
             .catch((err) => {
               console.log(err);

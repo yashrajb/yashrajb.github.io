@@ -22,7 +22,7 @@ const Section = (props) => {
   // let isVisible = useIsInViewPort(ref)
 
   const sectionTitle = title ? (
-    <SectionTitle className={styles.title}>{title}</SectionTitle>
+    <SectionTitle>{title}</SectionTitle>
   ) : (
     ""
   )

@@ -53,7 +53,5 @@ let config = {
     // To learn more, visit: https://gatsby.dev/offline
   ],
 }
-if (process.env.NODE_ENV === "production") {
-  config.pathPrefix = "/dev-portfolio"
-}
+
 module.exports = config

@@ -5,7 +5,7 @@ import { Title, Card, Flex, Text, SimpleGrid } from "@mantine/core"
 import Button from "@app/atoms/Button"
 import { useStore } from "@app/store"
 import { StaticImage } from "gatsby-plugin-image"
-import Image from "@app/atoms/Image"
+import Image from "@app/molecules/Image"
 const BLOG_LENGTH = 3
 
 const Component = () => {

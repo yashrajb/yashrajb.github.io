@@ -7,26 +7,22 @@ import CaseStudy from "@app/sections/Case Study"
 import Projects from "@app/sections/Projects"
 import Blog from "@app/sections/Blog"
 import About from "@app/sections/About"
-import Contact from "@app/sections/Contact"
-import { useStore } from "@app/store"
+import Testimonial from "@app/sections/Testimonial"
 import SEO from "../atoms/SEO"
 
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO />
       <Hero id="hero" />
       <Experience id="experience" />
       <CaseStudy id="caseStudy" />
       <Projects id="projects" />
       <Blog id="blog" />
+      <Testimonial id="testimonials" />
       <About id="about" />
-      <Contact id="contact" />
     </Layout>
   )
 }
 
 export default IndexPage
-
-export function Head() {
-  return <SEO />
-}

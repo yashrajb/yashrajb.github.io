@@ -17,6 +17,13 @@ let config = {
   plugins: [
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 0.1,
+        once: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {

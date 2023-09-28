@@ -5,7 +5,8 @@ import { Title, Card, Flex, Text, SimpleGrid } from "@mantine/core"
 import { useStore } from "@app/store"
 import { Instagram, Phone, Mail, GitHub, Linkedin } from "react-feather"
 import { StaticImage } from "gatsby-plugin-image"
-import Image from "@app/atoms/Image"
+import Image from "@app/molecules/Image"
+import SocialMediaLinks from "@app/molecules/SocialMediaLinks/index"
 
 const About = ({ id }) => {
   return (
@@ -44,8 +45,16 @@ const About = ({ id }) => {
             you'll find me strumming my guitar, devouring self-improvement
             books, and eagerly picking up new skills along the way.
           </Title>
+          <Title order={3} className={styles.subheadline}>
+            <strong>
+              Feel free to reach out to me if you think I can help you with your
+              project or if you just want to say hi!
+            </strong>
+          </Title>
         </div>
       </SimpleGrid>
+
+      <SocialMediaLinks />
     </Section>
   )
 }

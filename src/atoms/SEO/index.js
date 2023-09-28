@@ -1,8 +1,15 @@
 import React from "react"
-import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStore } from "@app/store/index"
 
-const SEO = ({ title = "", description = "", twitter = "" }) => {
+const SEO = (props) => {
   const host = typeof window !== "undefined" ? window.location.host : ""
+
+  const store = useStore()
+
+  let title = props?.title || `${store.title} - ${store.description}`
+  let description = props?.description || store.description
+  let twitter = store?.twitter
 
   let article =
     typeof window !== "undefined"
@@ -14,7 +21,7 @@ const SEO = ({ title = "", description = "", twitter = "" }) => {
   let image = `${host}/author.jpg`
 
   return (
-    <>
+    <Helmet title={title} titleTemplate={title}>
       <html lang="en" />
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -23,13 +30,13 @@ const SEO = ({ title = "", description = "", twitter = "" }) => {
       {article && <meta property="og:type" content="article" />}
       {title && <meta property="og:title" content={title} />}
       {description && <meta property="og:description" content={description} />}
-      {image && <meta property="og:image" content={image} />}
+      <meta property="og:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
       {twitter ? <meta name="twitter:creator" content={twitter} /> : ""}
       {title && <meta name="twitter:title" content={title} />}
       {description && <meta name="twitter:description" content={description} />}
-      {image && <meta name="twitter:image" content={image} />}
-    </>
+      <meta name="twitter:image" content={image} />
+    </Helmet>
   )
 }
 

@@ -4,10 +4,12 @@ const symbolVariants = {
   dot: "•",
   cube: "■",
   triangle: "►",
+  openQuotation: "❝",
+  closeQuotation: "❞",
 }
 
-function Symbol({ variant = "dot" }) {
-  return <span>{symbolVariants[variant]}</span>
+function Symbol({ variant = "dot", className }) {
+  return <span className={className}>{symbolVariants[variant]}</span>
 }
 
 export default Symbol

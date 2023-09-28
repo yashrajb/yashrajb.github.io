@@ -3,7 +3,7 @@ import * as styles from "./style.module"
 import { Grid, Title, Card } from "@mantine/core"
 import useIsInViewPort from "@app/hooks/useIsInViewPort"
 import PropTypes from "prop-types"
-import Image from "@app/atoms/Image"
+import Image from "@app/molecules/Image"
 import clsx from "clsx"
 
 function List({ image, className, children, ...otherProps }) {

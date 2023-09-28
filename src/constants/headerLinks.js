@@ -17,12 +17,12 @@ export default [
     id: "blog",
   },
   {
-    name: "about",
-    id: "about",
+    name: "testimonials",
+    id: "testimonials",
   },
   {
-    name: "contact",
-    id: "contact",
+    name: "about",
+    id: "about",
   },
   {
     name: "resume",

@@ -26,8 +26,8 @@ const Hero = () => {
       <Button className={mainModule.btn} onClick={() => onClick("caseStudy")}>
         Case Study
       </Button>
-      <Button onClick={() => onClick("contact")} className={mainModule.btn}>
-        Hire Me
+      <Button onClick={() => onClick("about")} className={mainModule.btn}>
+        Contact Me
       </Button>{" "}
     </Section>
   )

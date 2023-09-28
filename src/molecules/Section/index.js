@@ -18,17 +18,10 @@ const Section = (props) => {
   } = props
   let classes = clsx([className, styles.container])
 
-  const ref = useRef()
-  // let isVisible = useIsInViewPort(ref)
-
-  const sectionTitle = title ? (
-    <SectionTitle>{title}</SectionTitle>
-  ) : (
-    ""
-  )
+  const sectionTitle = title ? <SectionTitle>{title}</SectionTitle> : ""
 
   return (
-    <div ref={ref} className={classes} {...otherProps}>
+    <div className={classes} {...otherProps}>
       <Container size={size}>
         {sectionTitle}
         <Animation>{children}</Animation>

@@ -1,5 +1,7 @@
 @use "./variables/colors.module" as colors;
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 @font-face {
   font-family: "Roboto";
   src: url("/fonts/Roboto-Regular.woff") format("woff2");
@@ -14,7 +16,7 @@ body {
 }
 body {
   background: colors.$primaryBackground;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   color: colors.$primaryColor !important;
   padding: 0px;
   margin: 0px;

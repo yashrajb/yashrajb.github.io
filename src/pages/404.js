@@ -1,6 +1,6 @@
 import React from "react"
 import * as styles from "@app/styles/404.module"
-import Image from "@app/atoms/Image"
+import Image from "@app/molecules/Image"
 import { Link } from "gatsby"
 const NotFoundPage = () => (
   <div className={styles.notFoundPage}>

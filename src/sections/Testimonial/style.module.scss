@@ -1,0 +1,46 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+.testimonials {
+  background-color: colors.$secondaryBackground;
+  padding: 70px 0px;
+  text-align: center;
+  .testimonialContainer {
+    margin: 10px;
+    .testimonial {
+      font-size: 25px;
+      @media screen and (max-width: sizes.$md) {
+        font-size: 18px;
+      }
+    }
+    .image {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      margin: 20px 0px;
+      @media screen and (max-width: sizes.$md) {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .name {
+      @media screen and (max-width: sizes.$md) {
+        font-size: 20px;
+      }
+    }
+
+    .position {
+      color: colors.$paraColor;
+      @media screen and (max-width: sizes.$md) {
+        font-size: 16px;
+      }
+    }
+
+    .symbol {
+      font-size: 30px;
+      @media screen and (max-width: sizes.$md) {
+        font-size: 23px;
+      }
+    }
+  }
+}

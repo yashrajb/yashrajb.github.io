@@ -29,7 +29,7 @@ const Experience = ({ id }) => {
                 <Title order={3} className={styles.description}>
                   {description}
                 </Title>
-                <ul className={styles.points}>
+                {/* <ul className={styles.points}>
                   {points.map((point, index) => {
                     return (
                       <li key={index}>
@@ -37,7 +37,7 @@ const Experience = ({ id }) => {
                       </li>
                     )
                   })}
-                </ul>
+                </ul> */}
               </Grid.Col>
             )
           }

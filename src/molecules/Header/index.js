@@ -15,6 +15,7 @@ import Button from "@app/atoms/Button"
 import { useStore } from "@app/store"
 import clsx from "clsx"
 import { Instagram, Phone, AtSign, GitHub, Linkedin } from "react-feather"
+import Animation from "@app/molecules/Animation/index"
 
 export default function ResponsiveHeader(props) {
   const { title } = useStore()
@@ -90,43 +91,41 @@ export default function ResponsiveHeader(props) {
   )
 
   return (
-    <>
-      <MantineHeader className={clsx(styles.container)}>
-        <Link className={styles.logo} to="/">
-          {title}
-        </Link>
+    <MantineHeader className={clsx(styles.container)}>
+      <Link className={styles.logo} to="/">
+        {title}
+      </Link>
 
-        <Group spacing={5} className={styles.links}>
-          {caseStudy
-            ? HomeLink
-            : headerLinks.map(({ name, id, href }) => {
-                if (href) {
-                  return (
-                    <a
-                      className={clsx({
-                        [styles.link]: true,
-                      })}
-                      key={name}
-                      href={href || id}
-                      target="_blank"
-                    >
-                      {name}
-                    </a>
-                  )
-                }
+      <Group spacing={5} className={styles.links}>
+        {caseStudy
+          ? HomeLink
+          : headerLinks.map(({ name, id, href }) => {
+              if (href) {
                 return (
-                  <span
+                  <a
+                    className={clsx({
+                      [styles.link]: true,
+                    })}
                     key={name}
-                    onClick={() => onHeaderLinkClick(id)}
-                    className={styles.link}
+                    href={href || id}
+                    target="_blank"
                   >
                     {name}
-                  </span>
+                  </a>
                 )
-              })}
-        </Group>
-        {BurgerMenu}
-      </MantineHeader>
-    </>
+              }
+              return (
+                <span
+                  key={name}
+                  onClick={() => onHeaderLinkClick(id)}
+                  className={styles.link}
+                >
+                  {name}
+                </span>
+              )
+            })}
+      </Group>
+      {BurgerMenu}
+    </MantineHeader>
   )
 }

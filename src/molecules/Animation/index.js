@@ -1,18 +1,8 @@
 import React from "react"
-import * as styles from "./style.module.scss"
-import clsx from "clsx"
 
-const allAnimations = {
-  "fade in": styles.fadeIn,
-}
-
-const Animation = ({ children, name = "fade in" }) => {
+const Animation = ({ children, name = "slide-right" }) => {
   return (
-    <div
-      className={clsx({
-        [allAnimations[name]]: true,
-      })}
-    >
+    <div data-sal={name} data-sal-duration={1000} data-sal-easing="ease">
       {children}
     </div>
   )

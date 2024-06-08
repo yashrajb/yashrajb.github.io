@@ -1,8 +1,10 @@
 @use "@app/styles/variables/colors.module";
 @use "@app/styles/variables/sizes.module";
 .container {
-  color: colors.$primaryColor;
+  color: colors.$paraColor;
   font-size: 50px;
+  font-weight: unset;
+  font-family: "Raleway";
 
   @media screen and (max-width: sizes.$md) {
     font-size: 30px;

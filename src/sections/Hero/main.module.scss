@@ -7,10 +7,9 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  
+
   .greetings {
-    color: colors.$primaryColor;
-    font-size: 45px;
+    font-size: 35px;
     padding: 0px;
     margin-top: -60px;
     margin-bottom: 10px;
@@ -21,8 +20,8 @@
   }
 
   .headline {
-    font-size: 70px;
-    color: colors.$primaryColor;
+    font-size: 50px;
+
     margin-bottom: 17px;
     margin-top: 0px;
   }
@@ -30,8 +29,6 @@
   .btn {
     margin-right: 15px;
   }
-
-
 
   @media screen and (max-width: sizes.$md) {
     .greetings {

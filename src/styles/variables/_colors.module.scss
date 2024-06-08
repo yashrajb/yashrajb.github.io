@@ -1,25 +1,15 @@
-$primaryBackground: #16161a;
-$secondaryBackground: #242629;
+$primaryBackground: #eff0f3;
+$secondaryBackground: white;
 
 $primaryColor: white;
 
-$buttonBackground: #7f5af0;
-$paraColor: #94a1b2;
-
-// orange, white, grey color schemes
-
-// $primaryBackground: #eff0f3;
-// $secondaryBackground: #fffffe;
-
-// $primaryColor: #0d0d0d;
-
-// $buttonBackground: #ff8e3c;
-// $paraColor: #2a2a2a;
+$buttonBackground: #ff8e3c;
+$paraColor: black;
 
 :export {
   primarybackground: $primaryBackground;
   secondarybackground: $secondaryBackground;
   primarycolor: $primaryColor;
   buttonbackground: $buttonBackground;
-  paracolor: $paraColor;
+  paraColor: $paraColor;
 }

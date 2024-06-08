@@ -1,31 +1,23 @@
 export default [
   {
     name: "experience",
-    id: "experience",
+    href: "#experience",
   },
-  {
-    name: "case study",
-    id: "caseStudy",
-  },
-
   {
     name: "projects",
-    id: "projects",
+    href: "#projects",
   },
   {
     name: "blog",
-    id: "blog",
+    href: "https://basanyash627.medium.com",
+    target: "__blank",
   },
   {
     name: "testimonials",
-    id: "testimonials",
+    href: "#testimonials",
   },
   {
     name: "about",
-    id: "about",
-  },
-  {
-    name: "resume",
-    href: "/Yashraj-Basan-Resume.pdf",
+    href: "#about",
   },
 ]

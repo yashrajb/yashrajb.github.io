@@ -1,10 +1,12 @@
 import React from "react"
-import { AppShell, Container } from "@mantine/core"
 import Header from "@app/molecules/Header"
+import SocialMediaLinks from "@app/molecules/SocialMediaLinks"
 export default ({ children, ...other }) => {
   return (
-    <AppShell padding="0px" {...other} header={<Header />}>
+    <>
+      <Header />
       {children}
-    </AppShell>
+      <SocialMediaLinks />
+    </>
   )
 }

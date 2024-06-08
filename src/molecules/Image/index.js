@@ -1,13 +1,17 @@
 import React, { useRef } from "react"
-import { Image } from "@mantine/core"
 import useIsInViewPort from "@app/hooks/useIsInViewPort"
+import { Image } from "react-bootstrap"
 
-export default ({ src, ...otherProps }) => {
+export default ({ src, viewPort = true, ...otherProps }) => {
   const ref = useRef()
   const isVisible = useIsInViewPort(ref)
   return (
     <div ref={ref}>
-      {isVisible ? <Image src={src} {...otherProps} /> : <p></p>}
+      {isVisible ? (
+        <img className={"img-fluid"} src={src} {...otherProps} />
+      ) : (
+        <p></p>
+      )}
     </div>
   )
 }

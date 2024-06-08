@@ -1,14 +1,12 @@
 import React, { useMemo } from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "@app/molecules/Layout"
-import Animation from "@app/molecules/Animation"
 import * as styles from "./styles.module.scss"
-import { Container, Title, Text, SimpleGrid, Grid } from "@mantine/core"
 import SectionTitle from "@app/atoms/SectionTitle"
-import SocialMediaLinks from "@app/molecules/SocialMediaLinks"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Image from "@app/molecules/Image"
 import SEO from "@app/atoms/SEO/index"
+import clsx from "clsx"
 
 const GridCols = 2
 
@@ -34,7 +32,7 @@ export const query = graphql`
 `
 
 const Post = (props) => {
-  let { slug, data } = props
+  let { data } = props
   const {
     title,
     website,
@@ -72,47 +70,47 @@ const Post = (props) => {
         title={`Case Study - ${title}`}
         description={`Case Study - ${title}`}
       />
-      <Container className={styles.container}>
+      <div className={clsx(["container", styles.container])}>
         <SectionTitle>Case Study: {title}</SectionTitle>
-        <Title order={3} className={styles.dateAndWebsite}>
+        <h4 className={styles.dateAndWebsite}>
           {createdAt} |{" "}
-          <a href={website} target="_blank">
+          <a href={website} target="_blank" rel="noreferrer">
             {website}
           </a>
-        </Title>
+        </h4>
         <div className="text-center">
           {featureImage ? (
             <GatsbyImage image={image} alt={`cover image of ${title}`} />
           ) : null}
-
-          {memoizedScreenShotAndGrid.map((images, index) => {
-            const cols = Object.keys(images).length
-            return (
-              <SimpleGrid
-                key={index}
-                className={styles.imagesGrid}
-                cols={cols}
-                breakpoints={[
-                  { maxWidth: "md", cols: 1 },
-                  { maxWidth: "sm", cols: 1 },
-                  { maxWidth: "xs", cols: 1 },
-                ]}
-                verticalSpacing="md"
-                spacing="md"
-              >
-                <Image src={images["0"]} />
-                <Image src={images["1"]} />
-              </SimpleGrid>
-            )
-          })}
+          {memoizedScreenShotAndGrid.length ? (
+            <div className="row">
+              {memoizedScreenShotAndGrid.map((images) => {
+                console.log(images)
+                return (
+                  <>
+                    <div className="col-sm">
+                      <Image src={images["0"]} />
+                    </div>
+                    <div className="col-sm">
+                      <Image src={images["1"]} />
+                    </div>
+                  </>
+                )
+              })}
+            </div>
+          ) : (
+            ""
+          )}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
-        <Title order={3} className={styles.subheadline}>
+        <div
+          className={styles.content}
+          dangerouslySetInnerHTML={{ __html: html }}
+        ></div>
+        <h4 className={styles.subheadline}>
           Don't let those creative ideas go to waste! Let's bring them to life.
           Contact me today, and let's kickstart your next project!
-        </Title>
-        <SocialMediaLinks />
-      </Container>
+        </h4>
+      </div>
     </Layout>
   )
 }

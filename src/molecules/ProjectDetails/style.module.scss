@@ -1,0 +1,35 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+
+.projectDetails {
+  margin: 80px 0px;
+  &:nth-child(1) {
+    margin-top: 30px;
+  }
+  img {
+    box-shadow: 4px 4px 5px 2px grey;
+    border: 6px solid #ff8e3c;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  a {
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: sizes.$md) {
+    .details {
+      margin-top: 10px;
+    }
+    a {
+      margin-top: 6px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    h4,
+    h5 {
+      font-size: 17px;
+    }
+  }
+}

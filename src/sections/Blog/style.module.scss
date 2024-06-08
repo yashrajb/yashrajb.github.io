@@ -1,24 +1,17 @@
 @use "@app/styles/variables/colors.module";
 @use "@app/styles/variables/sizes.module";
 .blogs {
-  padding: 50px 0px;
-  a {
-    text-decoration: none;
-  }
   .blog {
-    padding: 30px;
-    margin-top: 30px;
+    a {
+      color: colors.$paraColor;
+    }
+    &:nth-child(1) {
+      margin-top: 0px;
+    }
+    margin-top: 40px;
     background: colors.$secondaryBackground;
     .title {
       margin: 15px 0px;
-      color: colors.$primaryColor;
-      position: relative;
-    }
-    .date {
-      color: colors.$paraColor;
-    }
-    .btn {
-      margin: 20px 0px;
     }
 
     @media screen and (max-width: sizes.$md) {

@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react"
 import * as styles from "./style.module.scss"
-import { Title, SimpleGrid } from "@mantine/core"
 import { useStore } from "@app/store"
 import {
   Instagram,
@@ -10,8 +9,11 @@ import {
   Linkedin,
   Twitter,
 } from "react-feather"
+import clsx from "clsx"
+import Section from "@app/molecules/Section"
+import { Container } from "react-bootstrap"
 
-const SocialMediaLinks = () => {
+const SocialMediaLinks = (props) => {
   const { email, instagram, github, twitter, linkedin, phoneNumber } =
     useStore()
 
@@ -25,11 +27,6 @@ const SocialMediaLinks = () => {
       title: phoneNumber,
       Icon: Phone,
       href: `tel:${phoneNumber}`,
-    },
-    {
-      title: "yashrajbasan2",
-      Icon: Twitter,
-      href: twitter,
     },
     {
       title: "yashraj.dev",
@@ -49,44 +46,28 @@ const SocialMediaLinks = () => {
   ]
 
   return (
-    <SimpleGrid
-      cols={2}
-      breakpoints={[
-        { maxWidth: "md", cols: 1 },
-        { maxWidth: "sm", cols: 1 },
-        { maxWidth: "xs", cols: 1 },
-      ]}
-    >
-      <ul className={styles.links}>
-        {links.slice(0, 3).map(({ title, Icon, href }) => {
-          return (
-            <li key={title}>
-              <a href={href} target="_blank" className={styles.link}>
-                <Icon size={20} />
-                <Title order={3} className={styles.title}>
-                  {title}
-                </Title>
+    <Container>
+      <div className={clsx(["row", styles.links])}>
+        <div className="col d-flex flex-wrap justify-content-center align-items-center">
+          {links.map(({ title, Icon, href }) => {
+            return (
+              <a
+                href={href}
+                target="_blank"
+                key={title}
+                className={styles.link}
+              >
+                <Icon size={25} />
               </a>
-            </li>
-          )
-        })}
-      </ul>
+            )
+          })}
 
-      <ul className={styles.links}>
-        {links.slice(3).map(({ title, Icon, href }) => {
-          return (
-            <li key={title}>
-              <a href={href} target="_blank" className={styles.link}>
-                <Icon size={20} />
-                <Title order={3} className={styles.title}>
-                  {title}
-                </Title>
-              </a>
-            </li>
-          )
-        })}
-      </ul>
-    </SimpleGrid>
+          <div className="w-100 text-center mt-3">
+            &copy; {new Date().getFullYear()} Yashraj Basan
+          </div>
+        </div>
+      </div>
+    </Container>
   )
 }
 

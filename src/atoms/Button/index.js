@@ -1,10 +1,14 @@
 import React from "react"
-import { Anchor, UnstyledButton } from "@mantine/core"
+import { Button } from "react-bootstrap"
 import * as styles from "./style.module"
 import clsx from "clsx"
 import { Link } from "gatsby"
 export default ({ children, to, href, className = "", ...otherProps }) => {
-  let classes = clsx([to || href ? styles.link : styles.btn, className])
+  let classes = clsx([
+    styles.btn,
+    className,
+    to || href ? styles.link : styles.btn,
+  ])
   let props = {
     ...otherProps,
   }
@@ -19,15 +23,15 @@ export default ({ children, to, href, className = "", ...otherProps }) => {
 
   if (href) {
     return (
-      <Anchor className={classes} target="_blank" href={href} {...otherProps}>
+      <a className={classes} target="_blank" href={href} {...otherProps}>
         {children}
-      </Anchor>
+      </a>
     )
   }
 
   return (
-    <UnstyledButton className={classes} {...props}>
+    <Button className={classes} {...props}>
       {children}
-    </UnstyledButton>
+    </Button>
   )
 }

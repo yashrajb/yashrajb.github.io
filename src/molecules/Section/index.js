@@ -4,7 +4,8 @@ import * as styles from "./style.module.scss"
 import SectionTitle from "@app/atoms/SectionTitle"
 import useIsInViewPort from "@app/hooks/useIsInViewPort"
 import clsx from "clsx"
-import { Container } from "@mantine/core"
+import { Container } from "react-bootstrap"
+
 import Animation from "@app/molecules/Animation"
 
 const Section = (props) => {
@@ -12,21 +13,22 @@ const Section = (props) => {
     title,
     children,
     className = "",
-    size = "xl",
+
     lazyLoading,
+    fluid = false,
     ...otherProps
   } = props
-  let classes = clsx([className, styles.container])
+  let classes = clsx([className, styles.container, "section"])
 
   const sectionTitle = title ? <SectionTitle>{title}</SectionTitle> : ""
 
   return (
-    <div className={classes} {...otherProps}>
-      <Container size={size}>
+    <Container fluid={true} className={classes} {...otherProps}>
+      <Container>
         {sectionTitle}
         <Animation>{children}</Animation>
       </Container>
-    </div>
+    </Container>
   )
 }
 

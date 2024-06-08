@@ -5,9 +5,9 @@
   margin: 0px;
   padding: 10px;
   font-size: 24px;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   background: colors.$buttonBackground;
+  color: colors.$paraColor;
   outline: none !important;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -21,7 +21,6 @@
 
   border: 0px;
   z-index: 1;
-  color: colors.$primaryColor;
 
   &:after {
     position: absolute;
@@ -37,11 +36,8 @@
 
   &:hover {
     color: rgb(0, 0, 0);
-  }
-
-  &:hover:after {
-    top: 0;
-    height: 100%;
+    background: colors.$buttonBackground;
+    box-shadow: 7px 7px 7px lightgrey;
   }
 
   &:active {
@@ -50,18 +46,14 @@
 }
 
 .link {
-  font-size: 19px;
-  display: inline-block;
-  margin-top: 10px;
-  padding: 6px;
-  background-color: colors.$buttonBackground;
-  color: colors.$primaryColor;
+  font-size: 15px;
+
+  color: colors.$paraColor;
   text-decoration: none !important;
   &:hover {
     text-decoration: none !important;
   }
   @media screen and (max-width: sizes.$md) {
-    padding: 5px;
     font-size: 16px;
   }
 }

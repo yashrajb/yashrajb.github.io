@@ -2,32 +2,12 @@
 @use "@app/styles/variables/sizes.module";
 
 .links {
-  list-style: none;
-  padding: 0px;
-  margin: 10px 0px;
-
-  @media screen and (max-width: sizes.$md) {
-    &:nth-of-type(2) {
-      margin-top: -15px;
-    }
-  }
-
+  text-align: center;
+  padding: 100px 0px;
   .link {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    text-decoration: none !important;
-    padding: 20px;
-    background-color: colors.$secondaryBackground;
-    .title {
-      margin-left: 10px;
-      @media screen and (max-width: sizes.$md) {
-        font-size: 18px;
-      }
-    }
-    svg,
-    .title {
-      color: colors.$paraColor;
-    }
+    background-color: colors.$primaryBackground;
+    padding: 10px;
+    color: colors.$paraColor;
+    margin-right: 3px;
   }
 }

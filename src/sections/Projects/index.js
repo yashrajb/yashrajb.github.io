@@ -2,55 +2,77 @@ import React, { useRef, useState, useEffect } from "react"
 import * as styles from "./style.module.scss"
 import Section from "@app/molecules/Section"
 import allProjects from "@app/constants/projects"
-import { Grid, Title, Text, Card, Image } from "@mantine/core"
 import useIsInViewPort from "@app/hooks/useIsInViewPort"
-import List from "@app/molecules/List"
 import Button from "@app/atoms/Button"
 import { useStore } from "@app/store"
+import { useStaticQuery, graphql } from "gatsby"
+import { Row, Col } from "react-bootstrap"
+import ProjectDetails from "@app/molecules/ProjectDetails/index"
 
 const Projects = ({ id }) => {
   const { github } = useStore()
 
-  const projectsList = allProjects.map(
-    ({ title, tech, description, image, links }) => {
-      return (
-        <List
-          key={title}
-          image={{
-            src: `/projects/${image}`,
-            alt: title,
-          }}
-        >
-          <Title order={1} className={styles.title}>
-            {title}
-          </Title>
-          <Title order={3} className={styles.badge}>
-            {tech}
-          </Title>
-          <Title order={2} className={styles.desc}>
-            {description}
-          </Title>
-
-          {links.map(({ title, link }) => {
-            return (
-              <Button
-                key={title}
-                href={link}
-                className={styles.link}
-                target="_blank"
-              >
-                {title}
-              </Button>
-            )
-          })}
-        </List>
-      )
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___createdAt], order: DESC }
+        filter: { fileAbsolutePath: { regex: "/case-study/" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              description
+              tech
+              links {
+                title
+                link
+              }
+              createdAt
+              website
+              featureImage {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            fields {
+              slug
+            }
+            excerpt(pruneLength: 350)
+          }
+        }
+      }
     }
-  )
+  `)
+
+  const projectsList = allProjects.map((props) => {
+    return <ProjectDetails src={`/projects/${props.image}`} {...props} />
+  })
+
+  const caseStudyList = data?.allMarkdownRemark?.edges.map((edge, index) => {
+    let { title, featureImage, tech, links, description, website } =
+      edge.node.frontmatter
+    let { slug } = edge.node.fields
+
+    const projectDetailsProps = {
+      title,
+      description,
+      tech,
+      links,
+      slug,
+      src: featureImage.childImageSharp.fluid.src,
+    }
+
+    return <ProjectDetails {...projectDetailsProps} />
+  })
 
   const content = (
     <>
       {projectsList}
+      {caseStudyList}
       <p className={styles.seeAll}>
         <Button href={github}>See All Projects</Button>
       </p>

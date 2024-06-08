@@ -1,8 +1,13 @@
 ---
-title: Elevating Cheespens' Brand with a Cost-Effective Web Solution
-subheadline: Simplified Branding, Enhanced User Trust, Streamlined Operations, and Achieved Remarkable Cost-Effective Solutions for CheesePens
+title: Elevating Cheespens' Brand with a Cost Effective Solution
+description: Simplified Branding, Enhanced User Trust, Streamlined Operations, and Achieved Remarkable Cost-Effective Solutions for CheesePens
+tech: Gatsby.js, React, Github
 createdAt: Jul, 2021
 featureImage: ./screenshots/1.png
+links:
+  - title: Visit Website
+    link: https://cheesepens.com
+
 website: https://cheesepens.com
 screenshots:
   - "./screenshots/2.png"

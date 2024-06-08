@@ -30,7 +30,7 @@
     }
 
     .position {
-      color: colors.$paraColor;
+      color: colors.$fontColor;
       @media screen and (max-width: sizes.$md) {
         font-size: 16px;
       }

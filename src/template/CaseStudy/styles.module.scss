@@ -5,7 +5,7 @@
   margin-bottom: 90px;
 
   p {
-    color: colors.$paraColor;
+    color: colors.$fontColor;
     font-size: 17px;
     @media screen and (min-width: sizes.$lg) {
       font-size: 24px;
@@ -26,7 +26,7 @@
   }
 
   .dateAndWebsite {
-    color: colors.$paraColor;
+    color: colors.$fontColor;
     margin: 15px 0px;
     @media screen and (max-width: sizes.$md) {
       font-size: 16px;
@@ -41,6 +41,6 @@
 
   a,
   .subheadline {
-    color: colors.$paraColor;
+    color: colors.$fontColor;
   }
 }

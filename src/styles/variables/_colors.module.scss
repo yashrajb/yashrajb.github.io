@@ -4,12 +4,12 @@ $secondaryBackground: white;
 $primaryColor: white;
 
 $buttonBackground: #ff8e3c;
-$paraColor: black;
+$fontColor: black;
 
 :export {
   primarybackground: $primaryBackground;
   secondarybackground: $secondaryBackground;
   primarycolor: $primaryColor;
   buttonbackground: $buttonBackground;
-  paraColor: $paraColor;
+  fontColor: $fontColor;
 }

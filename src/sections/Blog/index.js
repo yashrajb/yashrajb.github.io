@@ -31,7 +31,6 @@ const Component = () => {
 
   const allBlogs = blogs?.items?.length
     ? blogs.items.map((blog) => {
-        console.dir(blog)
         let { link, title, description, pubDate } = blog
 
         return (

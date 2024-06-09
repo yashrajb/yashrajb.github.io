@@ -27,7 +27,7 @@ const Hero = () => {
         real-world and business challenges.
       </p>
       <Button className={mainModule.btn} onClick={() => onClick("projects")}>
-        Case Study
+        Projects
       </Button>
       <Button onClick={() => onClick("about")} className={mainModule.btn}>
         Contact Me

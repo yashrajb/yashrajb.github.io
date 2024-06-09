@@ -85,7 +85,6 @@ const Post = (props) => {
           {memoizedScreenShotAndGrid.length ? (
             <div className="row">
               {memoizedScreenShotAndGrid.map((images) => {
-                console.log(images)
                 return (
                   <>
                     <div className="col-sm">

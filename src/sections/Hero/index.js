@@ -24,7 +24,7 @@ const Hero = () => {
       <p className={mainModule.greetings}>Hi, I'm {author},</p>
       <p className={mainModule.headline}>
         Passionate about building innovative software solutions to address
-        real-world and business challenges.
+        real world and business challenges.
       </p>
       <Button className={mainModule.btn} onClick={() => onClick("projects")}>
         Projects

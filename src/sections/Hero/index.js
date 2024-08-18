@@ -23,8 +23,7 @@ const Hero = () => {
     >
       <p className={mainModule.greetings}>Hi, I'm {author},</p>
       <p className={mainModule.headline}>
-        Passionate about building innovative software solutions to address
-        real world and business challenges.
+        Passionate about developing innovative software solutions that resolve problems in the real world and businesses.
       </p>
       <Button className={mainModule.btn} onClick={() => onClick("projects")}>
         Projects

@@ -10,6 +10,7 @@ import Input from "@app/atoms/Input/index"
 import useSocialMediaLinks from "@app/hooks/useSocialMediaLinks"
 import * as style from "./index.module.scss"
 
+
 const Contact = () => {
   const { author } = useStore()
 
@@ -18,7 +19,8 @@ const Contact = () => {
   return (
     <Section className={style.main} lazyLoading={false}>
       <div className="row gap-3">
-        <Col xs="12" sm="12" md="12" lg="6">
+     
+        <Col xs="12" sm="12" md="12" lg="6"> 
           <h2 className={style.greetings}>Contact Me</h2>
           <p className={style.headline}>
             Got a project in mind or just want to chat? I’m here to help turn{" "}
@@ -32,18 +34,13 @@ const Contact = () => {
               </a>
             )
           })}
+         </Col>
+
+         <Col xs="12" sm="12" md="12" lg="6" className={style.contactForm}>
+          <Image src="/contact.svg" />
         </Col>
-        <Col xs="12" sm="12" md="12" lg="6" className={style.contactForm}>
-          <Form>
-            <Input placeholder="Name" />
-            <Input placeholder="Email" type="email" />
-            <Input as="textarea" rows={10} />
-            <Button className={style.btn} type="secondary">
-              Submit
-            </Button>{" "}
-          </Form>
-        </Col>
-      </div>
+
+      </div> 
     </Section>
   )
 }

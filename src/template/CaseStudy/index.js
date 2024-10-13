@@ -7,6 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Image from "@app/molecules/Image"
 import SEO from "@app/atoms/SEO/index"
 import clsx from "clsx"
+import { Link } from "gatsby"
 
 const GridCols = 2
 
@@ -74,7 +75,12 @@ const Post = (props) => {
         <SectionTitle>Case Study: {title}</SectionTitle>
         <h4 className={styles.dateAndWebsite}>
           {createdAt} |{" "}
-          <a href={website} target="_blank" rel="noreferrer">
+          <a
+            href={website}
+            className={styles.website}
+            target="_blank"
+            rel="noreferrer"
+          >
             {website}
           </a>
         </h4>
@@ -82,6 +88,7 @@ const Post = (props) => {
           {featureImage ? (
             <GatsbyImage image={image} alt={`cover image of ${title}`} />
           ) : null}
+          {memoizedScreenShotAndGrid.length ? <hr /> : ""}
           {memoizedScreenShotAndGrid.length ? (
             <div className="row">
               {memoizedScreenShotAndGrid.map((images) => {
@@ -106,8 +113,12 @@ const Post = (props) => {
           dangerouslySetInnerHTML={{ __html: html }}
         ></div>
         <h4 className={styles.subheadline}>
-          Don't let those creative ideas go to waste! Let's bring them to life.
-          Contact me today, and let's kickstart your next project!
+          Got a project in mind or just want to chat? I’m here to help turn{" "}
+          <span className={"colorfulTag"}>your vision into reality. </span>
+          <Link to="/contact" className="importantLink">
+            Let’s connect
+          </Link>{" "}
+          and create something impactful!
         </h4>
       </div>
     </Layout>

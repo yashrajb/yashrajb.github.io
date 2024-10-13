@@ -1,10 +1,30 @@
 @use "@app/styles/variables/sizes.module";
 @use "@app/styles/variables/colors.module";
+
 .navbar {
-  padding: 10px;
-  background-color: colors.$primaryBackground !important;
-  img.logo {
-    width: 50px;
-    height: 50px;
+  padding: 10px 15px !important;
+  background-color: colors.$backgroundColor;
+  color: colors.$textColor !important;
+  a {
+    color: colors.$textColor !important;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .navbar-brand {
+    text-transform: lowercase !important;
+    color: colors.$textColor !important;
+    font-family: "Inter Extra Bold";
+  }
+
+  .navbarCollapse {
+    color: white !important;
+  }
+
+  .hireMe {
+    background-color: colors.$primary;
+
+    text-decoration: none;
   }
 }

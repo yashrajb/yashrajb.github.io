@@ -18,14 +18,15 @@ export default (props) => {
         ])}
       >
         <h3>{title}</h3>
-        <h4>{tech}</h4>
-        <h5>{description}</h5>
+        <p className={styles.technologies}>{tech}</p>
+        <p className={styles.desc}>{description}</p>
 
         {links.map(({ title, link }) => {
           return (
             <Button
               key={title}
               href={link}
+              size="sm"
               className={styles.link}
               target="_blank"
             >
@@ -35,7 +36,11 @@ export default (props) => {
         })}
 
         {slug ? (
-          <Button href={`/case-study/${slug}`} key={`case-study-${title}`}>
+          <Button
+            size="sm"
+            href={`/case-study/${slug}`}
+            key={`case-study-${title}`}
+          >
             Read Case Study
           </Button>
         ) : (

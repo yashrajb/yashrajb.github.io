@@ -1,15 +1,38 @@
-$primaryBackground: #eff0f3;
-$secondaryBackground: white;
+// $primaryBackground: #ebf4fa; // #eff0f3;
+// $secondaryBackground: white;
 
-$primaryColor: white;
+// $primaryColor: white;
 
-$buttonBackground: #ff8e3c;
-$fontColor: black;
+// $buttonBackground: #ff8e3c;
+// $fontColor: black;
+
+// $textColor: #061319;
+// $background: #ebf4fa;
+
+$textColor: #fffffe; //#0c1822;
+$backgroundColor: #16161a; // #f4f8fb;
+$primary: #7f5af0; //#295270;
+$secondary: #7f5af0; //#8780d0;
+$accent: #623aa1;
+$paraColor: #94a1b2;
+
+$secondaryBackground: #242629;
+
+// $themes: (
+//   light: (),
+//   dark: (
+//     text: #dde9f3,
+//     background: #04080b,
+//     primary: #8fb8d6,
+//     secondary: #352f7f,
+//     accent: #855ec5,
+//   ),
+// );
 
 :export {
-  primarybackground: $primaryBackground;
-  secondarybackground: $secondaryBackground;
-  primarycolor: $primaryColor;
-  buttonbackground: $buttonBackground;
-  fontColor: $fontColor;
+  textColor: $textColor;
+  backgroundColor: $backgroundColor;
+  primary: $primary;
+  secondary: $secondary;
+  accent: $accent;
 }

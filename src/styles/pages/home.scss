@@ -1,0 +1,5 @@
+@use "../variables/colors.module" as colors;
+
+div.section:nth-of-type(even) {
+  background: colors.$secondaryBackground;
+}

@@ -1,8 +1,13 @@
 import React from "react"
-
-const Animation = ({ children, name = "slide-right" }) => {
+import * as styles from "./style.module.scss"
+const Animation = ({ children, name }) => {
   return (
-    <div data-sal={name} data-sal-duration={1000} data-sal-easing="ease">
+    <div
+      className={styles.container}
+      data-sal={name}
+      data-sal-duration={1000}
+      data-sal-easing="ease"
+    >
       {children}
     </div>
   )

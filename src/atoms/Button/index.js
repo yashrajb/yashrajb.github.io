@@ -3,11 +3,19 @@ import { Button } from "react-bootstrap"
 import * as styles from "./style.module"
 import clsx from "clsx"
 import { Link } from "gatsby"
-export default ({ children, to, href, className = "", ...otherProps }) => {
+export default ({
+  type,
+  children,
+  to,
+  href,
+  className = "",
+  ...otherProps
+}) => {
   let classes = clsx([
     styles.btn,
     className,
-    to || href ? styles.link : styles.btn,
+    href ? styles.link : null,
+    type && type == "secondary" ? styles.secondary : null,
   ])
   let props = {
     ...otherProps,
@@ -23,9 +31,9 @@ export default ({ children, to, href, className = "", ...otherProps }) => {
 
   if (href) {
     return (
-      <a className={classes} target="_blank" href={href} {...otherProps}>
+      <Button className={classes} target="_blank" href={href} {...otherProps}>
         {children}
-      </a>
+      </Button>
     )
   }
 

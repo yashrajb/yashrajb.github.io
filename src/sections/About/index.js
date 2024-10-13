@@ -3,6 +3,7 @@ import * as styles from "./style.module.scss"
 import Section from "@app/molecules/Section"
 import Image from "@app/molecules/Image"
 import SocialMediaLinks from "@app/molecules/SocialMediaLinks/index"
+import { Link } from "gatsby"
 
 const About = ({ id }) => {
   return (
@@ -12,26 +13,30 @@ const About = ({ id }) => {
           <Image src="/author.jpg" alt={"author"} />
         </div>
         <div className="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12">
-          <h4 className={styles.description}>
-            Since my school days, I've been passionate about building websites.
-            Completing a web project feels like wielding digital magic. My
-            journey began with{" "}
+          <p className={styles.description}>
+            Since school, I’ve had a passion for building websites, feeling like
+            I’m wielding digital magic with each project. My journey began with{" "}
             <a
               target="_blank"
-              className={styles.duckettBooks}
+              className="importantLink"
               href="https://amzn.to/46cNYJi"
             >
               Jon Duckett's Books
-            </a>
-            , immersing myself in HTML, CSS, and JavaScript. This curiosity led
-            to over 3 years of hands-on software development experience and a
-            Computer Science degree. Outside of coding, I enjoy playing guitar,
-            reading books, and learning new skills.
-          </h4>
-          <h4 className={styles.description}>
-            Feel free to reach out to me if you think I can help you with your
-            project or if you just want to say hi!
-          </h4>
+            </a>{" "}
+            on HTML, CSS, and JavaScript, sparking a curiosity that grew into
+            years of hands-on software development experience and a Computer
+            Science degree. I’ve worked on a range of projects, from building
+            MVPs to scalable web applications and browser extensions. Outside of
+            coding, I love playing guitar, reading diverse genres, and
+            continuously exploring new skills.
+          </p>
+          <p className={styles.description}>
+            Feel free to{" "}
+            <Link to="/contact" className="importantLink">
+              reach out me
+            </Link>{" "}
+            if you need help with your project or just want to say hi!
+          </p>
         </div>
       </div>
     </Section>

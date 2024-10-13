@@ -4,12 +4,10 @@
 .main {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100vh;
 
-  .image {
-    width: 500px;
-    height: 500px;
+  @media screen and (max-width: sizes.$md) {
+    margin-top: 30% !important;
   }
 
   .greetings {
@@ -18,9 +16,6 @@
     padding: 0px;
     margin-bottom: 10px;
     font-family: "Inter Extra Bold";
-    @media screen and (max-width: sizes.$md) {
-      margin-top: 30%;
-    }
   }
 
   .headline {
@@ -28,7 +23,7 @@
     margin-bottom: 17px;
     margin-top: 0px;
     color: colors.$paraColor;
-    font-family: "Inter Thin";
+    font-family: "Inter Regular";
   }
 
   .btn {
@@ -37,6 +32,9 @@
 
   @media screen and (max-width: sizes.$md) {
     text-align: left;
+    .contactForm {
+      margin-top: 20px !important;
+    }
     .greetings {
       font-size: 35px;
     }
@@ -46,11 +44,10 @@
     }
   }
 
-  .colorfulTag {
-    color: #7f5af0;
-    background-image: linear-gradient(90deg, #7f5af0 32%, #b847fe 54%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .link {
+    padding: 10px;
+    font-size: 22px;
+
+    color: white;
   }
 }

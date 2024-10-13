@@ -3,13 +3,11 @@
 .blogs {
   .blog {
     a {
-      color: colors.$fontColor;
     }
     &:nth-child(1) {
       margin-top: 0px;
     }
     margin-top: 40px;
-    background: colors.$secondaryBackground;
     .title {
       margin: 15px 0px;
     }

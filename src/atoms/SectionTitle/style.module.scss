@@ -1,11 +1,9 @@
 @use "@app/styles/variables/colors.module";
 @use "@app/styles/variables/sizes.module";
 .container {
-  color: colors.$fontColor;
-  font-size: 50px;
-  font-weight: unset;
-  font-family: "Raleway";
-
+  font-size: 40px;
+  font-family: "Inter Extra Bold";
+  text-align: center;
   @media screen and (max-width: sizes.$md) {
     font-size: 30px;
   }

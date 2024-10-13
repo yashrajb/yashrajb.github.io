@@ -1,0 +1,20 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+
+.container {
+  background: colors.$secondaryBackground;
+  border: 0px;
+  border-radius: 0px;
+  color: white;
+  outline: 0px;
+  padding: 30px 10px;
+  outline-color: white !important;
+  &:focus {
+    background: colors.$secondaryBackground;
+    border-color: white;
+    color: white;
+    -webkit-box-shadow: 0px 0px 3px 0.5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 3px 0.5px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 3px 0.5px rgba(255, 255, 255, 1);
+  }
+}

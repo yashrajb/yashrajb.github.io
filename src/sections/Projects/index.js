@@ -49,7 +49,13 @@ const Projects = ({ id }) => {
   `)
 
   const projectsList = allProjects.map((props) => {
-    return <ProjectDetails src={`/projects/${props.image}`} {...props} />
+    return (
+      <ProjectDetails
+        key={props.title}
+        src={`/projects/${props.image}`}
+        {...props}
+      />
+    )
   })
 
   const caseStudyList = data?.allMarkdownRemark?.edges.map((edge, index) => {
@@ -66,21 +72,21 @@ const Projects = ({ id }) => {
       src: featureImage.childImageSharp.fluid.src,
     }
 
-    return <ProjectDetails {...projectDetailsProps} />
+    return <ProjectDetails key={title} {...projectDetailsProps} />
   })
 
   const content = (
     <>
       {projectsList}
       {caseStudyList}
-      <p className={styles.seeAll}>
+      {/* <p className={styles.seeAll}>
         <Button href={github}>See All Projects</Button>
-      </p>
+      </p> */}
     </>
   )
 
   return (
-    <Section id={id} title="Selected Projects" className={styles.projects}>
+    <Section id={id} title="Works" className={styles.projects}>
       {content}
     </Section>
   )

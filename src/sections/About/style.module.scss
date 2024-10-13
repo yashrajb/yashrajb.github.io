@@ -1,13 +1,9 @@
 @use "@app/styles/variables/colors.module";
 @use "@app/styles/variables/sizes.module";
 .about {
-  background: colors.$primaryBackground;
-  .duckettBooks {
-    font-weight: 300;
-    color: colors.$fontColor;
-    text-decoration: underline;
-  }
   .description {
+    font-size: 22px;
+
     @media screen and (max-width: sizes.$md) {
       margin-top: 10px;
       font-size: 17px;

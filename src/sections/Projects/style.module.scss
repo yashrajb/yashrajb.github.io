@@ -1,11 +1,9 @@
 @use "@app/styles/variables/colors.module";
 @use "@app/styles/variables/sizes.module";
 .projects {
-  background-color: colors.$primaryBackground;
   padding: 70px 0px;
 
   .desc {
-    color: colors.$fontColor;
   }
 
   .link {

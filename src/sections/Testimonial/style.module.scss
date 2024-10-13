@@ -1,7 +1,6 @@
 @use "@app/styles/variables/colors.module";
 @use "@app/styles/variables/sizes.module";
 .testimonials {
-  background-color: colors.$primaryBackground;
   padding: 70px 0px;
   text-align: center;
   .testimonialContainer {
@@ -30,7 +29,7 @@
     }
 
     .position {
-      color: colors.$fontColor;
+      font-size: 20px;
       @media screen and (max-width: sizes.$md) {
         font-size: 16px;
       }

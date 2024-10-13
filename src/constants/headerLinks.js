@@ -1,11 +1,15 @@
 export default [
   {
-    name: "experience",
-    href: "#experience",
+    name: "services",
+    href: "/#services",
   },
   {
-    name: "projects",
-    href: "#projects",
+    name: "experience",
+    href: "/#experience",
+  },
+  {
+    name: "works",
+    href: "/#works",
   },
   {
     name: "blog",
@@ -14,10 +18,10 @@ export default [
   },
   {
     name: "testimonials",
-    href: "#testimonials",
+    href: "/#testimonials",
   },
   {
     name: "about",
-    href: "#about",
+    href: "/#about",
   },
 ]

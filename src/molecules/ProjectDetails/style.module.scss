@@ -7,14 +7,20 @@
     margin-top: 30px;
   }
   img {
-    box-shadow: 4px 4px 5px 2px grey;
-    border: 6px solid #ff8e3c;
     width: 100%;
     max-width: 100%;
   }
 
   a {
     margin-right: 10px;
+  }
+
+  .desc {
+    font-size: 18px;
+  }
+
+  .technologies {
+    text-transform: capitalize;
   }
 
   @media screen and (max-width: sizes.$md) {

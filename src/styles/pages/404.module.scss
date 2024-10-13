@@ -3,17 +3,17 @@
 
 .notFoundPage {
   text-align: center;
-  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 9% 0%;
   img {
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
 
     @media screen and (max-width: sizes.$md) {
       width: 200px;
       height: 200px;
     }
-  }
-  .link {
-    color: colors.$fontColor;
   }
 }

@@ -1,49 +1,14 @@
 import React, { useRef, useState, useEffect } from "react"
 import * as styles from "./style.module.scss"
 import { useStore } from "@app/store"
-import {
-  Instagram,
-  Phone,
-  Mail,
-  GitHub,
-  Linkedin,
-  Twitter,
-} from "react-feather"
+import { Instagram, Phone, Mail, GitHub, Linkedin } from "react-feather"
 import clsx from "clsx"
 import Section from "@app/molecules/Section"
 import { Container } from "react-bootstrap"
+import useSocialMediaLinks from "@app/hooks/useSocialMediaLinks"
 
 const SocialMediaLinks = (props) => {
-  const { email, instagram, github, twitter, linkedin, phoneNumber } =
-    useStore()
-
-  const links = [
-    {
-      title: email,
-      Icon: Mail,
-      href: `mailto:${email}`,
-    },
-    {
-      title: phoneNumber,
-      Icon: Phone,
-      href: `tel:${phoneNumber}`,
-    },
-    {
-      title: "yashraj.dev",
-      Icon: Instagram,
-      href: instagram,
-    },
-    {
-      title: "yashrajb",
-      Icon: GitHub,
-      href: github,
-    },
-    {
-      title: "yashrajbasan",
-      Icon: Linkedin,
-      href: linkedin,
-    },
-  ]
+  const links = useSocialMediaLinks()
 
   return (
     <Container>
@@ -57,7 +22,7 @@ const SocialMediaLinks = (props) => {
                 key={title}
                 className={styles.link}
               >
-                <Icon size={25} />
+                <Icon size={30} />
               </a>
             )
           })}

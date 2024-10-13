@@ -15,6 +15,7 @@ const Experience = ({ id }) => {
         ) => {
           return (
             <ExperienceDetails
+              key={index}
               index={index}
               title={title}
               company={company}

@@ -10,7 +10,7 @@ const Testimonial = ({ id }) => {
     <Section id={id} title="Testimonials" className={styles.testimonials}>
       {testimonials.map(({ title, name, image, testimonial }) => {
         return (
-          <div className={styles.testimonialContainer}>
+          <div className={styles.testimonialContainer} key={title}>
             <p className={styles.testimonial}>
               <Symbol variant="openQuotation" className={styles.symbol} />{" "}
               {testimonial}{" "}
@@ -18,7 +18,7 @@ const Testimonial = ({ id }) => {
             </p>
             <img src={image} className={styles.image} alt={title} />
             <h4 className={styles.name}>{name}</h4>
-            <h5 className={styles.position}>{title}</h5>
+            <p className={styles.position}>{title}</p>
           </div>
         )
       })}

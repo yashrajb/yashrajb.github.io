@@ -1,12 +1,12 @@
 import React from "react"
 import Header from "@app/molecules/Header"
 import SocialMediaLinks from "@app/molecules/SocialMediaLinks"
-export default ({ children, ...other }) => {
+export default ({ children, hideFooter = false, ...other }) => {
   return (
     <>
       <Header />
       {children}
-      <SocialMediaLinks />
+      {!hideFooter ? <SocialMediaLinks /> : null}
     </>
   )
 }

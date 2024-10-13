@@ -5,9 +5,10 @@
   text-align: center;
   padding: 100px 0px;
   .link {
-    background-color: colors.$primaryBackground;
     padding: 10px;
-    color: colors.$fontColor;
+
+    color: colors.$paraColor;
+
     margin-right: 3px;
   }
 }

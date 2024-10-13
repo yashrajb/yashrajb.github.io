@@ -13,7 +13,7 @@ const Section = (props) => {
     title,
     children,
     className = "",
-
+    animationName = "slide-right",
     lazyLoading,
     fluid = false,
     ...otherProps
@@ -26,7 +26,7 @@ const Section = (props) => {
     <Container fluid={true} className={classes} {...otherProps}>
       <Container>
         {sectionTitle}
-        <Animation>{children}</Animation>
+        <Animation name={animationName}>{children}</Animation>
       </Container>
     </Container>
   )

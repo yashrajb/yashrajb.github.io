@@ -8,7 +8,6 @@ import About from "../About/index"
 import { Row, Col } from "react-bootstrap"
 
 const Hero = () => {
-  const { author } = useStore()
 
   const onClick = (id) => {
     const element = document.getElementById(id)
@@ -25,7 +24,7 @@ const Hero = () => {
       lazyLoading={false}
     >
       <h2 className={mainModule.greetings}>
-        Hi, I'm {author}. I turn
+        Hi, I'm Yashraj Basan. I turn
         <span className={mainModule.colorfulTag}> Your vision into code</span>
       </h2>
       <p className={mainModule.headline}>

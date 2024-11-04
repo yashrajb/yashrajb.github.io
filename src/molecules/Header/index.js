@@ -14,7 +14,6 @@ import SocialMediaLinks from "../SocialMediaLinks/index"
 import { Menu } from "react-feather"
 
 export default function ResponsiveHeader(props) {
-  const { title } = useStore()
 
   const onHeaderLinkClick = (id) => {
     const element = document.getElementById(id)
@@ -30,7 +29,7 @@ export default function ResponsiveHeader(props) {
     <Navbar expand="lg" fixed="top" className={styles.navbar}>
       <Container>
         <Navbar.Brand>
-          <Link to="/">{title}</Link>
+          <Link to="/">Yashraj Basan</Link>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"

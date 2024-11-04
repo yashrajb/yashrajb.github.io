@@ -19,7 +19,7 @@ const Hero = () => {
   }
   return (
     <Section
-      animationName="slide-up"
+      animationName="none"
       className={mainModule.main}
       lazyLoading={false}
     >

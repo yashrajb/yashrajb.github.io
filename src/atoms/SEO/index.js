@@ -24,6 +24,8 @@ const SEO = (props) => {
     <Helmet title={title} titleTemplate={title}>
       <html lang="en" />
       <title>{title}</title>
+      {/* Google AdSense account meta (added for older Gatsby/static SSR pages) */}
+      <meta name="google-adsense-account" content="ca-pub-7522178747096822" />
       <meta name="description" content={description} />
       <meta name="image" content={image} />
       {url && <meta property="og:url" content={url} />}

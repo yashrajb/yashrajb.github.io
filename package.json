@@ -1,0 +1,22 @@
+{
+  "name": "yashrajb.github.io",
+  "version": "1.0.0",
+  "description": "1. Edit `config.js` (content) or `src/` (layout, header, footer, css, js). 2. Run `node build.js`  (no npm install needed, Node 16.7+). 3. Upload the `dist/` folder.",
+  "homepage": "https://github.com/yashrajb/yashrajb.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/yashrajb/yashrajb.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashrajb/yashrajb.github.io.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}

@@ -1,0 +1,35 @@
+.hero{padding:6rem 0 6rem}
+.lede{font-size:1.2rem;color:var(--muted);max-width:auto;margin:0 0 2rem}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+.services{display:grid;gap:2rem}
+.services p{margin:0;}
+
+.job{display:grid;grid-template-columns:9.5rem 1fr;gap:.25rem 2rem;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:0}
+.job time{color:var(--muted);font-size:.95rem}
+.job p{margin:0;color:var(--muted)}
+@media(max-width:600px){.job{grid-template-columns:1fr}}
+
+.project,.cert{padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.project:last-child,.cert:last-child{border-bottom:0}
+.section-link{margin:1.25rem 0 0;font-size:.95rem}
+.tags{color:var(--muted);font-size:.9rem;margin-bottom:.6rem}
+.links{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.95rem}
+
+blockquote{margin:2rem 0;padding-left:1.25rem;border-left:2px solid var(--accent);font-size:1.15rem}
+blockquote footer{margin-top:1rem;font-size:.95rem;color:var(--muted)}
+
+/* case study pages */
+.page{padding:4rem 0}
+.page img{margin:1.5rem 0}
+.page img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:.6rem;background:var(--surface)}
+.page figcaption{margin-top:.5rem;font-size:.9rem;color:var(--muted)}
+.page h1{font-size:clamp(2rem,6vw,3.25rem);line-height:1.1;margin-bottom:1rem}
+.page h2{margin:3rem 0 .75rem}
+.page ul{padding-left:1.2rem}
+.page li{margin-bottom:.4rem}
+.page .meta{color:var(--muted);margin:0 0 2rem}
+.page .cta{margin-top:2rem}
+.page .case-study-footer { font-size: 30px; }

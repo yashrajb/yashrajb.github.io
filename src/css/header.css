@@ -1,0 +1,21 @@
+header.top{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.5rem}
+.brand{font-weight:700;text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;align-items:center;gap:1.25rem;font-size:.95rem;margin-left:auto}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--text)}
+.actions{display:flex;align-items:center;gap:.6rem}
+.nav-btn{color:var(--bg);background:var(--text);padding:.35rem .9rem;border-radius:.45rem;font-weight:500;font-size:.95rem;text-decoration:none}
+.nav-btn:hover{background:var(--accent);color:var(--bg)}
+#theme,#burger{background:none;border:1px solid var(--line);color:var(--text);width:2.25rem;height:2.25rem;cursor:pointer;place-items:center;font-size:1rem;line-height:1}
+#theme{display:grid;border-radius:50%}
+#burger{display:none;border-radius:.5rem;font-size:1.15rem}
+#theme:hover,#burger:hover{border-color:var(--accent)}
+@media(max-width:820px){
+  #burger{display:grid}
+  .actions{margin-left:auto}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;margin:0;flex-direction:column;align-items:stretch;gap:0;padding:.5rem 1.5rem 1rem;background:var(--bg);border-bottom:1px solid var(--line);font-size:1.05rem}
+  header.top.open nav{display:flex}
+  nav a{padding:.8rem 0;border-bottom:1px solid var(--line);color:var(--text)}
+  nav a:last-child{border-bottom:0}
+}
